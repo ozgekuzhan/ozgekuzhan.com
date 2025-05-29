@@ -1,66 +1,89 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Özge Kuzhan | Full Stack Web Developer</title>
+  <title>Ozge Kuzhan | Full Stack Web Developer</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 <body>
 
   <header>
-    <h1>Özge Kuzhan</h1>
-    <p>Full Stack Web Developer | Amsterdam</p>
+    <h1>Ozge Kuzhan</h1>
+    <p>Full Stack Web Developer based in Amsterdam</p>
   </header>
 
   <section id="about">
-    <h2>About me</h2>
-    <p>A dynamic and results-oriented professional based in the Netherlands, holding a bachelor's degree in International Relations and currently
-      transitioning into a career in software development. Enrolled in the Le Wagon Amsterdam Full Stack Web Development bootcamp, while also
-      actively pursuing self-learning through platforms like Udemy over the past two years. Previously held successful roles in marketing, finance,
-      purchasing, and operations management. Brings strong problem-solving skills, leadership abilities, and versatile work experience to create
-      meaningful impact in the tech industry.
-    </p>
+    <h2>About Me</h2>
+    <p>I am a dynamic and results-oriented professional with a background in International Relations and a growing career in software development. I attended the Le Wagon Full Stack Web Development bootcamp in Amsterdam and continue self-learning through platforms like Udemy. I bring strong problem-solving skills and versatile work experience from previous roles in marketing, finance, and operations.</p>
   </section>
 
   <section id="projects">
-    <h2>Projelerim</h2>
+    <h2>Projects</h2>
 
     <div class="project">
-      <img src="img/dealhunter/main_page.PNG" alt="DealHuntr Products" class="dealhuntr" />
-      <img src="img/dealhunter/expanded.PNG" alt="Expanded view of product" class="dealhuntr">
-      <img src="img/dealhunter/categories.PNG" alt="Choose categories from the list" class="dealhuntr">
-      <img src="img/dealhunter/dashboard.PNG" alt="Dashboard" class="dealhuntr">
-      <img src="img/dealhunter/fav_list.PNG" alt="My favourites list" class="dealhuntr">
-      <img src="img/dealhunter/shopping_list.PNG" alt="My shopping list" class="dealhuntr">
       <h3>DealHuntr</h3>
-      <p>İndirimleri listeleyen bir web uygulaması. Ruby on Rails, JavaScript ve Bootstrap kullanılarak geliştirilmiştir.</p>
+      <div class="project-gallery">
+        <a href="img/dealhunter/main_page.PNG" class="glightbox" data-gallery="dealhuntr" data-title="Main Page">
+          <img src="img/dealhunter/main_page.PNG" alt="Main Page" class="thumbnail">
+        </a>
+        <a href="img/dealhunter/expanded.PNG" class="glightbox" data-gallery="dealhuntr" data-title="Expanded Product View">
+          <img src="img/dealhunter/expanded.PNG" alt="Expanded View" class="thumbnail">
+        </a>
+        <a href="img/dealhunter/categories.PNG" class="glightbox" data-gallery="dealhuntr" data-title="Categories">
+          <img src="img/dealhunter/categories.PNG" alt="Categories" class="thumbnail">
+        </a>
+        <a href="img/dealhunter/dashboard.PNG" class="glightbox" data-gallery="dealhuntr" data-title="Dashboard">
+          <img src="img/dealhunter/dashboard.PNG" alt="Dashboard" class="thumbnail">
+        </a>
+        <a href="img/dealhunter/fav_list.PNG" class="glightbox" data-gallery="dealhuntr" data-title="Favourites List">
+          <img src="img/dealhunter/fav_list.PNG" alt="Favourites List" class="thumbnail">
+        </a>
+        <a href="img/dealhunter/shopping_list.PNG" class="glightbox" data-gallery="dealhuntr" data-title="Shopping List">
+          <img src="img/dealhunter/shopping_list.PNG" alt="Shopping List" class="thumbnail">
+        </a>
+      </div>
+      <p>A discount listing web application built using Ruby on Rails, JavaScript, and Bootstrap.</p>
     </div>
 
     <div class="project">
-      <img src="img/worktree/index page worktree.jpg" alt="WorkTree Index Page" class="worktree"/>
-      <img src="img/worktree/rent page  worktree.jpg" alt="WorkTree Rent Page" class="worktree">
-      <img src="img/worktree/dashboard worktree.jpg" alt="WorkTree Dashboard" class="worktree">
       <h3>WorkTree</h3>
-      <p>Airbnb benzeri bir ofis bulma platformu. Takım çalışmasıyla geliştirildi. UI/UX tasarımı Figma ile yapıldı.</p>
+      <div class="project-gallery">
+        <a href="img/worktree/index page worktree.jpg" class="glightbox" data-gallery="worktree" data-title="Index Page">
+          <img src="img/worktree/index page worktree.jpg" alt="Index Page" class="thumbnail">
+        </a>
+        <a href="img/worktree/rent page  worktree.jpg" class="glightbox" data-gallery="worktree" data-title="Rent Page">
+          <img src="img/worktree/rent page  worktree.jpg" alt="Rent Page" class="thumbnail">
+        </a>
+        <a href="img/worktree/dashboard worktree.jpg" class="glightbox" data-gallery="worktree" data-title="Dashboard">
+          <img src="img/worktree/dashboard worktree.jpg" alt="Dashboard" class="thumbnail">
+        </a>
+      </div>
+      <p>A web platform for finding office spaces, inspired by Airbnb. Built collaboratively with a team and designed using Figma.</p>
     </div>
   </section>
 
   <section id="cv">
-    <h2>CV</h2>
-    <p><a href="OzgeKuzhanResume.pdf" target="_blank">PDF formatında CV’mi görüntülemek için tıklayın</a></p>
+    <h2>Resume</h2>
+    <p><a href="OzgeKuzhanResume.pdf" target="_blank">Click here to view my resume (PDF)</a></p>
   </section>
 
   <section id="contact">
-    <h2>İletişim</h2>
+    <h2>Contact</h2>
     <p>Email: <a href="mailto:ozgekuzhan@gmail.com">ozgekuzhan@gmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/ozgekuzhan" target="_blank">linkedin.com/in/ozgekuzhan</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Özge Kuzhan</p>
+    <p>&copy; 2025 Ozge Kuzhan</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  </script>
 </body>
 </html>
