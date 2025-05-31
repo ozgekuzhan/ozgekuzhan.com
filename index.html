@@ -6,72 +6,139 @@
   <title>Ozge Kuzhan | Full Stack Web Developer</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
 </head>
 <body>
+  <div class="sidebar">
+    <header>
+      <h1>Ozge Kuzhan</h1>
+      <p id="header-text">Web Developer</p>
+    </header>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#cv">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 
-  <header>
-    <h1>Ozge Kuzhan</h1>
-    <p>Full Stack Web Developer based in Amsterdam</p>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a dynamic and results-oriented professional with a background in International Relations and a growing career in software development. I attended the Le Wagon Full Stack Web Development bootcamp in Amsterdam and continue self-learning through platforms like Udemy. I bring strong problem-solving skills and versatile work experience from previous roles in marketing, finance, and operations.</p>
-  </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>DealHuntr</h3>
-      <div class="project-gallery">
-        <a href="img/dealhunter/main_page.PNG" class="glightbox" data-gallery="dealhuntr" data-title="Main Page">
-          <img src="img/dealhunter/main_page.PNG" alt="Main Page" class="thumbnail-dealhuntr">
-        </a>
-        <a href="img/dealhunter/expanded.PNG" class="glightbox" data-gallery="dealhuntr" data-title="Expanded Product View">
-          <img src="img/dealhunter/expanded.PNG" alt="Expanded View" class="thumbnail-dealhuntr">
-        </a>
-        <a href="img/dealhunter/categories.PNG" class="glightbox" data-gallery="dealhuntr" data-title="Categories">
-          <img src="img/dealhunter/categories.PNG" alt="Categories" class="thumbnail-dealhuntr">
-        </a>
-        <a href="img/dealhunter/shopping_list.PNG" class="glightbox" data-gallery="dealhuntr" data-title="Shopping List">
-          <img src="img/dealhunter/shopping_list.PNG" alt="Shopping List" class="thumbnail-dealhuntr">
-        </a>
+  <div class="main-content">
+    <div class="aboutandpp">
+      <section id="about">
+        <div class="about-container">
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>I am a dynamic and results-oriented professional with a background in International Relations and a growing career in software development. I attended the Le Wagon Full Stack Web Development bootcamp in Amsterdam and continue self-learning through platforms like Udemy. I bring strong problem-solving skills and versatile work experience from previous roles in marketing, finance, and operations.</p>
+          </div>
+          <div class="about-photo">
+            <img src="img/pp.jpg" class="pp" alt="Me Myself">
+          </div>
+        </div>
+      </section>
+      <div class="floating-messages">
+        <span class="floating-text">Hire her</span>
+        <span class="floating-text">Give her a chance</span>
+        <span class="floating-text">Just do it</span>
+        <span class="floating-text">She codes, she conquers</span>
+        <span class="floating-text">Your next dev</span>
+        <span class="floating-text">You know you want to</span>
       </div>
-      <p>A discount listing web application built using Ruby on Rails, JavaScript, and Bootstrap.</p>
     </div>
 
-    <div class="project">
-      <h3>WorkTree</h3>
-      <div class="project-gallery">
-        <a href="img/worktree/index page worktree.jpg" class="glightbox" data-gallery="worktree" data-title="Index Page">
-          <img src="img/worktree/index page worktree.jpg" alt="Index Page" class="thumbnail-worktree">
-        </a>
-        <a href="img/worktree/rent page  worktree.jpg" class="glightbox" data-gallery="worktree" data-title="Rent Page">
-          <img src="img/worktree/rent page  worktree.jpg" alt="Rent Page" class="thumbnail-worktree">
-        </a>
-        <a href="img/worktree/dashboard worktree.jpg" class="glightbox" data-gallery="worktree" data-title="Dashboard">
-          <img src="img/worktree/dashboard worktree.jpg" alt="Dashboard" class="thumbnail-worktree">
-        </a>
+    <section id="projects">
+  <h2>Projects</h2>
+
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+
+    <!-- DealHuntr Project -->
+    <div class="col">
+      <div class="card bg-dark text-white h-100">
+        <div id="dealhuntrCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/dealhunter/main_page.PNG" class="d-block w-100" alt="Main Page" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="img/dealhunter/expanded.PNG" class="d-block w-100" alt="Expanded View" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="img/dealhunter/categories.PNG" class="d-block w-100" alt="Categories" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="img/dealhunter/shopping_list.PNG" class="d-block w-100" alt="Shopping List" loading="lazy">
+            </div>
+          </div>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#dealhuntrCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#dealhuntrCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#dealhuntrCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#dealhuntrCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">DealHuntr</h5>
+          <p class="card-text">A discount listing web application built using Ruby on Rails, JavaScript, and Bootstrap.</p>
+        </div>
+        <div class="card-footer bg-transparent border-top-0">
+          <a href="https://dealhuntr.fly.dev" target="_blank" class="btn btn-outline-light btn-sm">Visit Project</a>
+        </div>
       </div>
-      <p>A web platform for finding office spaces, inspired by Airbnb. Built collaboratively with a team and designed using Figma.</p>
     </div>
-  </section>
 
-  <section id="cv">
-    <h2>Resume</h2>
-    <p><a href="OzgeKuzhanResume.pdf" target="_blank">Click here to view my resume (PDF)</a></p>
-  </section>
+    <!-- WorkTree Project -->
+    <div class="col">
+      <div class="card bg-dark text-white h-100">
+        <div id="worktreeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/worktree/index page worktree.jpg" class="d-block w-100" alt="Index Page" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="img/worktree/rent page  worktree.jpg" class="d-block w-100" alt="Rent Page" loading="lazy">
+            </div>
+            <div class="carousel-item">
+              <img src="img/worktree/dashboard worktree.jpg" class="d-block w-100" alt="Dashboard" loading="lazy" >
+            </div>
+          </div>
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#worktreeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#worktreeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#worktreeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">WorkTree</h5>
+          <p class="card-text">A web platform for finding office spaces, inspired by Airbnb. Built collaboratively with a team and designed using Figma.</p>
+        </div>
+        <div class="card-footer bg-transparent border-top-0">
+          <a href="https://worktree.fly.dev" target="_blank" class="btn btn-outline-light btn-sm">Visit Project</a>
+        </div>
+      </div>
+    </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ozgekuzhan@gmail.com">ozgekuzhan@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/ozgekuzhan" target="_blank">linkedin.com/in/ozgekuzhan</a></p>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Ozge Kuzhan</p>
-  </footer>
+
+    <section id="cv">
+      <h2>Resume</h2>
+      <p><a href="OzgeKuzhanResume.pdf" target="_blank">Click here to view my resume (PDF)</a></p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ozgekuzhan@gmail.com">ozgekuzhan@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ozgekuzhan" target="_blank">linkedin.com/in/ozgekuzhan</a></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Ozge Kuzhan</p>
+    </footer>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
@@ -79,5 +146,6 @@
       selector: '.glightbox'
     });
   </script>
+
 </body>
 </html>

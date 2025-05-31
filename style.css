@@ -1,36 +1,109 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  color: #333;
+/* === THEME VARIABLES === */
+:root {
+  /* Background and Base */
+  --color-bg: #1C1C1E;            /* Dark Charcoal */
+  --color-bg-dark: #121212;       /* Almost Black */
+  --color-surface: #2C2C2E;       /* Soft Surface Gray */
+
+  /* Text */
+  --color-text-primary: #E5E5E7;  /* Off White */
+  --color-text-secondary: #B3B3B5;/* Subtle Gray */
+  --color-heading: #D4AF37;       /* Luxe Gold */
+  --color-link: #6CACE4;          /* Royal Blue */
+  --color-link-hover: #A1CFFF;    /* Soft Sky Blue */
+
+  /* Accents */
+  --color-primary: #D4AF37;       /* Luxe Gold */
+  --color-primary-light: #F0D98C; /* Pale Gold */
+  --color-primary-soft: #FFF4D6;  /* Champagne */
+  --color-accent: #6CACE4;        /* Royal Blue */
+  --color-accent-light: #D6EAF8;  /* Light Ice Blue */
 }
 
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('myfonts/MyCustomFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* GLOBAL STYLES */
+body {
+  font-family: 'MyCustomFont', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-secondary);
+  display: flex;
+  flex-direction: row;
+}
+
+/* HEADER */
 header {
-  background-color: #222;
-  color: white;
+  height: 240px;
   padding: 2rem;
   text-align: center;
 }
 
+#header-text {
+  color: var(--color-heading);
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h2 {
+  border-bottom: 2px solid var(--color-surface);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: var(--color-primary);
+}
+
+h3 {
+  text-align: center;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--color-link-hover);
+}
+
+/* LAYOUT */
 section {
   padding: 2rem;
   max-width: 800px;
   margin: auto;
 }
 
-h2 {
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+#about {
+  padding: 20px;
+  border-radius: 5%;
 }
 
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+}
+
+/* PROJECTS */
 .project {
-  background: white;
   padding: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .project img {
@@ -39,20 +112,25 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-a {
-  color: #0066cc;
-  text-decoration: none;
+.project-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
-a:hover {
-  text-decoration: underline;
+.thumbnail-dealhuntr,
+.thumbnail-worktree {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.2s;
+  cursor: pointer;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #666;
+.thumbnail:hover {
+  transform: scale(1.05);
 }
 
 .worktree {
@@ -63,28 +141,168 @@ footer {
   height: 100px;
 }
 
-.project-gallery {
+/* SIDEBAR */
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-secondary);
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.sidebar nav a {
+  display: block;
+  color: var(--color-text-secondary);
+  margin: 30px 20px 15px;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.sidebar nav a:hover {
+  color: var(--color-heading);
+}
+
+.main-content {
+  margin-left: 300px;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo {
+    margin-top: 1rem;
+  }
+}
+
+/* ABOUT */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-photo {
+  flex: 1;
+  text-align: center;
+}
+
+.pp {
+  max-width: 200px;
+  max-height: 300px;
+  border-radius: 100%;
+}
+
+/* FLOATING MESSAGES */
+.floating-messages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
   justify-content: center;
 }
 
-.thumbnail-dealhuntr {
-  width: 180px;
-  height: 300px;
-  border-radius: 8px;
-  transition: transform 0.2s;
-  cursor: pointer;
+.floating-text {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  animation: floatFade 12s infinite;
+  white-space: nowrap;
+  opacity: 0;
 }
 
-.thumbnail-worktree {
-  width: 300px;
-  height: 180px;
-  transition: transform 0.2s;
-  cursor: pointer;
+.floating-text:nth-child(1) { top: 12%; left: 15%; animation-delay: 0s; }
+.floating-text:nth-child(2) { top: 38%; left: 60%; animation-delay: 2.5s; }
+.floating-text:nth-child(3) { top: 72%; left: 25%; animation-delay: 5s; }
+.floating-text:nth-child(4) { top: 22%; left: 50%; animation-delay: 7.5s; }
+.floating-text:nth-child(5) { top: 58%; left: 12%; animation-delay: 10s; }
+.floating-text:nth-child(6) { top: 82%; left: 78%; animation-delay: 12.5s; }
+
+@keyframes floatFade {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  25%, 75% {
+    opacity: 0.8;
+    transform: translateY(-12px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-18px);
+  }
 }
 
-.thumbnail:hover {
-  transform: scale(1.05);
+/* CARDS & BUTTONS */
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.btn-outline-light {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--color-primary);
+  color: #fff;
 }
