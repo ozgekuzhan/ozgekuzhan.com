@@ -20,13 +20,13 @@
 
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('myfonts/MyCustomFont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  src: url('myfonts/MyCustomFont.woff2') format('woff2'),
+       url('myfonts/MyCustomFont.woff') format('woff'),
+       url('myfonts/MyCustomFont.ttf') format('truetype');
 }
 
 body {
-  font-family: 'MyCustomFont', 'Arial', sans-serif;
+  font-family: 'MyCustomFont', 'Arial', sans-serif !important;
   margin: 0;
   padding: 0;
   color: white;
@@ -35,7 +35,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   display: flex;
-  height: 100vh;
+  min-height: auto;
 }
 
 header {
@@ -135,13 +135,12 @@ footer {
 }
 
 .main-content {
+  background-color: rgba(44, 44, 46, 0.7);
   margin-left: 230px;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
+  padding: 40px;
   width: 100%;
   box-sizing: border-box;
-  min-height: 100vh;
-  position: relative;
+  min-height: 100vh; /* Dinamik yükseklik */
 }
 
 @supports (backdrop-filter: blur(4px)) {
@@ -205,7 +204,7 @@ footer {
 }
 
 .about-text p {
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
 }
 
 .about-photo {
