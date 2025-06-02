@@ -1,40 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll(".floating-text");
-  let intervalId;
+  let currentIndex = 0;
+  let animationDuration = 4000;
+  let displayInterval;
 
-  function randomizePositions() {
-    elements.forEach((el, index) => {
-      const top = Math.random() * 80;
-      const left = Math.random() * 80;
-      const delay = index * 1.5;
+  function showNextFloatingText() {
+    if (currentIndex > 0) {
+      const prevIndex = (currentIndex - 1 + elements.length) % elements.length;
+      elements[prevIndex].classList.remove("animate");
+      elements[prevIndex].style.opacity = '0';
+    }
 
-      el.style.top = `${top}%`;
-      el.style.left = `${left}%`;
-      el.style.animationDelay = `${delay}s`;
+    const currentElement = elements[currentIndex];
 
+    const top = Math.random() * 70;
+    const left = Math.random() * 70;
+
+    currentElement.style.top = `${top}%`;
+    currentElement.style.left = `${left}%`;
+    currentElement.style.opacity = '0';
+
+    currentElement.classList.add("animate");
+
+    currentIndex = (currentIndex + 1) % elements.length;
+  }
+
+  function startFloatingTextAnimation() {
+    clearInterval(displayInterval);
+
+    showNextFloatingText();
+
+    displayInterval = setInterval(showNextFloatingText, animationDuration);
+  }
+
+  function stopFloatingTextAnimation() {
+    clearInterval(displayInterval);
+    elements.forEach(el => {
       el.classList.remove("animate");
-      requestAnimationFrame(() => {
-        el.classList.add("animate");
-      });
+      el.style.opacity = '0';
     });
   }
 
-  function startAnimation() {
-    randomizePositions();
-    intervalId = setInterval(randomizePositions, 6000);
-  }
-
-  function stopAnimation() {
-    clearInterval(intervalId);
-  }
-
-  startAnimation();
+  startFloatingTextAnimation();
 
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
-      stopAnimation();
+      stopFloatingTextAnimation();
     } else {
-      startAnimation();
+      startFloatingTextAnimation();
     }
   });
 
