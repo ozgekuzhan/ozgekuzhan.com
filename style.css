@@ -105,10 +105,10 @@ footer {
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@supports (backdrop-filter: blur(6px)) {
+@supports (backdrop-filter: blur(3px)) {
   .sidebar {
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
   }
 }
 
@@ -137,13 +137,6 @@ footer {
   width: 100%;
   box-sizing: border-box;
   min-height: 100vh;
-}
-
-@supports (backdrop-filter: blur(4px)) {
-  .main-content {
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-  }
 }
 
 @media (max-width: 768px) {
@@ -286,4 +279,14 @@ footer {
 .btn-outline-light:hover {
   background-color: var(--color-primary);
   color: #fff;
+}
+
+.card.bg-dark {
+  background-color: rgba(33, 37, 41, 0.5) !important;
+}
+
+carousel-item img {
+  height: 300px;
+  object-fit: contain;
+  width: 100%;
 }
