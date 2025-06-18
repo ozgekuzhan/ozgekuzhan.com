@@ -14,6 +14,7 @@
   --color-text-secondary: #B3B3B5;
   --color-text-muted: #8E8E93;
 
+  --color-accent: #FFD700;
   --color-link: var(--color-primary-light);
   --color-link-hover: #a1c349;
 
@@ -107,7 +108,7 @@ h3 {
 }
 
 a {
-  color: var(--color-link);
+  color: var(--color-link) ;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -213,7 +214,6 @@ footer {
   h5 {
     text-align: center;
   }
-
   .sidebar {
     position: static;
     width: 100%;
@@ -342,7 +342,7 @@ footer {
 }
 
 .floating-text {
-  color: #FFD700;
+  color: var(--color-accent);
   position: absolute;
   font-size: 1.2rem;
   opacity: 0;
@@ -514,6 +514,12 @@ footer {
   color: var(--color-primary);
 }
 
+.gslide-description {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
 .glightbox-clean .gdesc-inner {
   background: var(--color-card-bg) !important;
   backdrop-filter: blur(10px);
@@ -543,6 +549,17 @@ footer {
   line-height: 1.5 !important;
   text-align: center !important;
   margin-top: 0.5rem !important;
+}
+
+.gslide-description,
+.gslide-description.description-bottom,
+.gslide-description.description-top,
+.gslide-description.description-left,
+.gslide-description.description-right {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  backdrop-filter: none !important;
 }
 
 .glightbox-clean .gslide-media {
