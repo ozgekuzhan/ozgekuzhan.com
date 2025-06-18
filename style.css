@@ -1,13 +1,28 @@
 :root {
-  --color-bg: rgba(28, 28, 30, 0.85);
-  --color-bg-dark: rgba(18, 18, 18, 0.7);
-  --color-surface: rgba(44, 44, 46, 0.9);
+  /* Ana renk paleti */
+  --color-primary: #a1c349;           /* Ana yeşil */
+  --color-primary-light: #b8d15e;     /* Açık yeşil */
+  --color-primary-dark: #8ba93d;      /* Koyu yeşil */
+
+  /* Arka plan renkleri */
+  --color-bg: rgba(28, 28, 30, 0.6);
+  --color-bg-dark: rgba(18, 18, 18, 0.5);
+  --color-surface: rgba(44, 44, 46, 0.6);
+  --color-surface-light: rgba(60, 60, 62, 0.4);
+
+  /* Metin renkleri */
   --color-text-primary: #E5E5E7;
   --color-text-secondary: #B3B3B5;
-  --color-heading: #a1c349;
-  --color-link: #d9e7b6;
-  --color-link-hover: #A1CFFF;
-  --color-primary: #a1c349;
+  --color-text-muted: #8E8E93;
+
+  /* Link ve vurgu renkleri */
+  --color-accent: #FFD700;             /* Altın sarısı - floating text için */
+  --color-link: var(--color-primary-light);
+  --color-link-hover: #a1c349;
+
+  /* Kart ve bileşen renkleri */
+  --color-card-bg: rgba(33, 37, 41, 0.4);
+  --color-border: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -17,7 +32,7 @@ body {
   font-optical-sizing: auto;
   margin: 0;
   padding: 0;
-  color: white;
+  color: var(--color-text-primary);
   background-image: url('img/stars.jpeg');
   background-size: cover;
   background-position: center;
@@ -33,7 +48,7 @@ header {
 }
 
 #header-text {
-  color: var(--color-heading);
+  color: var(--color-primary-light);
 }
 
 h1 {
@@ -41,26 +56,33 @@ h1 {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+  color: var(--color-text-primary);
 }
 
 h2 {
-  border-bottom: 2px solid var(--color-surface);
+  border-bottom: 2px solid var(--color-primary);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   text-align: left;
-  color: var(--color-primary);
+  color: var(--color-primary) !important;
 }
 
 h3 {
   text-align: center;
-  color: var(--color-link) !important;
+  color: var(--color-primary-light);
   margin-top: 1.5rem;
   margin-bottom: 0.8rem;
 }
 
 a {
-  color: var(--color-link);
+  color: var(--color-link) ;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
 }
 
 a:hover {
@@ -73,7 +95,12 @@ section {
   max-width: 800px;
   margin: auto;
 }
+#contact a {
+  color: var(--color-link) !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
 
+}
 .about-section {
   padding: 20px;
   border-radius: 5%;
@@ -83,20 +110,20 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  color: var(--color-text-primary);
+  color: var(--color-text-muted);
 }
 
 .sidebar {
   width: 230px;
   height: 100vh;
-  background-color: rgba(50, 50, 50, 0.7);
+  background-color: var(--color-bg-dark);
   color: var(--color-text-secondary);
   padding: 20px;
   box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid var(--color-border);
 }
 
 @supports (backdrop-filter: blur(3px)) {
@@ -110,6 +137,7 @@ footer {
   font-size: 24px;
   margin: 0 0 20px;
   text-align: center;
+  color: var(--color-text-primary);
 }
 
 .sidebar nav a {
@@ -117,15 +145,16 @@ footer {
   color: var(--color-text-secondary);
   margin: 30px 20px 15px;
   text-align: center;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .sidebar nav a:hover {
-  color: var(--color-heading);
+  color: var(--color-primary);
+  transform: translateX(5px);
 }
 
 .main-content {
-  background-color: rgba(44, 44, 46, 0.7);
+  background-color: var(--color-surface);
   margin-left: 230px;
   padding: 40px;
   width: 100%;
@@ -133,6 +162,7 @@ footer {
   min-height: 100vh;
 }
 
+/* Mobil responsive */
 @media (max-width: 768px) {
   body {
     flex-direction: column;
@@ -144,6 +174,7 @@ footer {
     height: auto;
     text-align: center;
     padding: 10px 0;
+    background-color: var(--color-bg);
   }
 
   .sidebar nav {
@@ -160,7 +191,8 @@ footer {
     margin: 5px 10px;
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--color-surface-light);
+    border: 1px solid var(--color-border);
   }
 
   .main-content {
@@ -184,6 +216,7 @@ footer {
     margin: 3px 5px;
     padding: 3px 8px;
   }
+
   .floating-text {
     font-size: 0.9rem;
   }
@@ -197,6 +230,7 @@ footer {
   }
 }
 
+/* About section */
 .about-container {
   position: relative;
   display: flex;
@@ -211,7 +245,7 @@ footer {
 }
 
 .about-text p {
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
 }
 
 .about-photo {
@@ -223,13 +257,20 @@ footer {
   max-width: 200px;
   max-height: 300px;
   border-radius: 100%;
+  transition: transform 0.3s ease;
 }
 
+.pp:hover {
+  transform: scale(1.05);
+}
+
+/* Floating text animasyonu */
 .floating-text {
-  color: #D4AF37;
+  color: var(--color-accent);
   position: absolute;
   font-size: 1.2rem;
   opacity: 0;
+  font-weight: 500;
 }
 
 .floating-text.animate {
@@ -241,21 +282,24 @@ footer {
     opacity: 0;
   }
   25%, 75% {
-    opacity: 0.3;
+    opacity: 0.4;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.7;
   }
 }
 
+/* Kart stilleri */
 .card-title {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
+  color: var(--color-primary);
 }
 
 .card-text {
   font-size: 0.95rem;
   line-height: 1.5;
+  color: var(--color-text-secondary);
 }
 
 .card-body {
@@ -265,31 +309,64 @@ footer {
 .btn-outline-light {
   border-color: var(--color-primary);
   color: var(--color-primary);
+  transition: all 0.3s ease;
 }
 
 .btn-outline-light:hover {
   background-color: var(--color-primary);
   color: #fff;
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(161, 195, 73, 0.3);
 }
 
 .card.bg-dark {
-  background-color: rgba(33, 37, 41, 0.5) !important;
+  background-color: var(--color-card-bg) !important;
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card.bg-dark:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Carousel */
 .carousel-item img {
   height: 300px;
   object-fit: contain;
   width: 100%;
+  border-radius: 8px 8px 0 0;
 }
 
+/* Skills, Education, Experience sections */
 .skills-category,
 .education-item,
 .experience-item {
-  background-color: var(--color-bg-dark);
+  background-color: var(--color-card-bg);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-category:hover,
+.education-item:hover,
+.experience-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.skills-category h3,
+.education-item h3,
+.experience-item h3 {
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-align: left;
+  font-size: 1.2rem;
 }
 
 .skills-category ul,
@@ -303,37 +380,43 @@ footer {
   gap: 10px;
 }
 
-.skills-category ul li,
+.skills-category ul li {
+  background-color: var(--color-card-bg);
+  color: var(--color-text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.8em 1.8em;
+  border-radius: 8px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skills-category ul li:hover {
+  background-color: rgba(161, 195, 73, 0.2);
+  color: var(--color-primary);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(161, 195, 73, 0.3);
+}
+
 .education-item p,
 .experience-item ul li {
   color: var(--color-text-secondary);
   font-size: 1rem;
   line-height: 1.6;
-  flex: 1 1 auto;
-}
-
-.skills-category ul li {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 0.5em 0.8em;
-  border-radius: 5px;
-  white-space: nowrap;
-}
-
-.education-item h3,
-.experience-item h3 {
-  color: var(--color-primary);
-  margin-top: 0;
   margin-bottom: 0.5rem;
-  text-align: left;
 }
 
 .education-item p strong {
   color: var(--color-text-primary);
 }
 
+/* Languages section */
 .languages-spoken {
   margin-top: 2rem;
-  border-top: 1px solid var(--color-surface);
+  border-top: 1px solid var(--color-border);
   padding-top: 1.5rem;
 }
 
@@ -341,7 +424,7 @@ footer {
   text-align: left;
   margin-top: 0;
   margin-bottom: 0.5rem;
-  color: var(--color-text-primary);
+  color: var(--color-primary);
 }
 
 .languages-spoken p {
@@ -349,6 +432,7 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+/* Contact section */
 .main-content ul {
   list-style: none;
   padding: 0;
@@ -356,19 +440,154 @@ footer {
 }
 
 .main-content ul li {
-  margin-bottom: 0.5rem;
-  color: var(--color-text-primary);
+  margin-bottom: 0.8rem;
+  color: var(--color-text-secondary);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
+.main-content ul li:last-child {
+  border-bottom: none;
+}
+
+.main-content ul li strong {
+  color: var(--color-primary);
+}
+
+/* GLightbox özelleştirmeleri */
+.gslide-description {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.glightbox-clean .gdesc-inner {
+  background: var(--color-card-bg) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.glightbox-clean .gslide-title {
+  color: var(--color-primary) !important;
+  font-family: 'Numans', 'Arial', sans-serif !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  margin: 0 !important;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+.glightbox-clean .gslide-desc {
+  color: var(--color-text-secondary) !important;
+  font-family: 'Numans', 'Arial', sans-serif !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+  margin-top: 0.5rem !important;
+}
+
+/* Tüm GLightbox container'ları */
+.gslide-description,
+.gslide-description.description-bottom,
+.gslide-description.description-top,
+.gslide-description.description-left,
+.gslide-description.description-right {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  backdrop-filter: none !important;
+}
+
+/* GLightbox container */
+.glightbox-clean .gslide-media {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glightbox-clean .gslide-image img {
+  border-radius: 12px;
+}
+
+/* GLightbox overlay */
+.glightbox-clean .goverlay {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* GLightbox navigation buttons */
+.glightbox-clean .gnext,
+.glightbox-clean .gprev {
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary) !important;
+  background: var(--color-card-bg) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.glightbox-clean .gnext:hover,
+.glightbox-clean .gprev:hover {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  transform: scale(1.1);
+}
+
+/* GLightbox close button */
+.glightbox-clean .gclose {
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary) !important;
+  background: var(--color-card-bg) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  top: 20px !important;
+  right: 20px !important;
+}
+
+.glightbox-clean .gclose:hover {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  transform: scale(1.1);
+}
+
+/* Mobil için ek düzenlemeler */
 @media (max-width: 768px) {
   .skills-category ul,
   .education-item ul,
   .experience-item ul {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .skills-category ul li {
-    width: 100%;
     text-align: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 3px;
+  }
+
+  /* GLightbox mobil düzenlemeleri */
+  .glightbox-clean .gdesc-inner {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .glightbox-clean .gslide-title {
+    font-size: 1rem !important;
+  }
+
+  .glightbox-clean .gslide-desc {
+    font-size: 0.9rem !important;
   }
 }
