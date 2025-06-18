@@ -1,26 +1,21 @@
 :root {
-  /* Ana renk paleti */
-  --color-primary: #a1c349;           /* Ana yeşil */
-  --color-primary-light: #b8d15e;     /* Açık yeşil */
-  --color-primary-dark: #8ba93d;      /* Koyu yeşil */
+  --color-primary: #a1c349;
+  --color-primary-light: #b8d15e;
+  --color-primary-dark: #8ba93d;
 
-  /* Arka plan renkleri */
   --color-bg: rgba(28, 28, 30, 0.6);
   --color-bg-dark: rgba(18, 18, 18, 0.5);
   --color-surface: rgba(44, 44, 46, 0.6);
   --color-surface-light: rgba(60, 60, 62, 0.4);
 
-  /* Metin renkleri */
   --color-text-primary: #E5E5E7;
   --color-text-secondary: #B3B3B5;
   --color-text-muted: #8E8E93;
 
-  /* Link ve vurgu renkleri */
-  --color-accent: #FFD700;             /* Altın sarısı - floating text için */
-  --color-link: var(--color-primary-light);
+  --color-accent: #FFD700;
+  --color-link: var(--color-text-primary);
   --color-link-hover: #a1c349;
 
-  /* Kart ve bileşen renkleri */
   --color-card-bg: rgba(33, 37, 41, 0.4);
   --color-border: rgba(255, 255, 255, 0.1);
 }
@@ -95,12 +90,19 @@ section {
   max-width: 800px;
   margin: auto;
 }
+
 #contact a {
-  color: var(--color-link) !important;
+  color: var(--color-link);
   text-decoration: none;
   transition: color 0.3s ease;
-
 }
+
+#contact a:hover {
+  text-decoration: underline;
+  color: var(--color-link-hover) !important;
+  transition: color 0.3s ease;
+}
+
 .about-section {
   padding: 20px;
   border-radius: 5%;
@@ -162,7 +164,6 @@ footer {
   min-height: 100vh;
 }
 
-/* Mobil responsive */
 @media (max-width: 768px) {
   body {
     flex-direction: column;
@@ -230,7 +231,6 @@ footer {
   }
 }
 
-/* About section */
 .about-container {
   position: relative;
   display: flex;
@@ -264,7 +264,6 @@ footer {
   transform: scale(1.05);
 }
 
-/* Floating text animasyonu */
 .floating-text {
   color: var(--color-accent);
   position: absolute;
@@ -289,7 +288,6 @@ footer {
   }
 }
 
-/* Kart stilleri */
 .card-title {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
@@ -331,7 +329,6 @@ footer {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Carousel */
 .carousel-item img {
   height: 300px;
   object-fit: contain;
@@ -339,7 +336,6 @@ footer {
   border-radius: 8px 8px 0 0;
 }
 
-/* Skills, Education, Experience sections */
 .skills-category,
 .education-item,
 .experience-item {
@@ -413,7 +409,6 @@ footer {
   color: var(--color-text-primary);
 }
 
-/* Languages section */
 .languages-spoken {
   margin-top: 2rem;
   border-top: 1px solid var(--color-border);
@@ -432,7 +427,6 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-/* Contact section */
 .main-content ul {
   list-style: none;
   padding: 0;
@@ -441,8 +435,8 @@ footer {
 
 .main-content ul li {
   margin-bottom: 0.8rem;
-  color: var(--color-text-secondary);
-  padding: 0.5rem 0;
+  color: var(--color-text-primary);
+  padding: 0.8em 1.8em;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -454,7 +448,6 @@ footer {
   color: var(--color-primary);
 }
 
-/* GLightbox özelleştirmeleri */
 .gslide-description {
   background: transparent !important;
   box-shadow: none !important;
@@ -492,7 +485,6 @@ footer {
   margin-top: 0.5rem !important;
 }
 
-/* Tüm GLightbox container'ları */
 .gslide-description,
 .gslide-description.description-bottom,
 .gslide-description.description-top,
@@ -504,7 +496,6 @@ footer {
   backdrop-filter: none !important;
 }
 
-/* GLightbox container */
 .glightbox-clean .gslide-media {
   border-radius: 12px;
   overflow: hidden;
@@ -515,14 +506,12 @@ footer {
   border-radius: 12px;
 }
 
-/* GLightbox overlay */
 .glightbox-clean .goverlay {
   background: rgba(0, 0, 0, 0.85) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
-/* GLightbox navigation buttons */
 .glightbox-clean .gnext,
 .glightbox-clean .gprev {
   color: var(--color-primary) !important;
@@ -541,7 +530,6 @@ footer {
   transform: scale(1.1);
 }
 
-/* GLightbox close button */
 .glightbox-clean .gclose {
   color: var(--color-primary) !important;
   border: 2px solid var(--color-primary) !important;
@@ -560,7 +548,6 @@ footer {
   transform: scale(1.1);
 }
 
-/* Mobil için ek düzenlemeler */
 @media (max-width: 768px) {
   .skills-category ul,
   .education-item ul,
@@ -577,7 +564,6 @@ footer {
     margin: 3px;
   }
 
-  /* GLightbox mobil düzenlemeleri */
   .glightbox-clean .gdesc-inner {
     padding: 1rem;
     margin: 0.5rem;
