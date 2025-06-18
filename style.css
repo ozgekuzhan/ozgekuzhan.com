@@ -92,8 +92,18 @@ section {
 }
 
 #contact a {
-  color: var(--color-link) !important;
+  color: var(--color-text-primary);
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact li {
+  padding: 1rem;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+  color: var(--color-link-hover) !important;
   transition: color 0.3s ease;
 }
 
@@ -317,7 +327,7 @@ footer {
 .card-title {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: var(--color-primary);
+  color: var(--color-primary) !important;
 }
 
 .card-text {
@@ -343,7 +353,6 @@ footer {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(161, 195, 73, 0.3);
-} 8px rgba(161, 195, 73, 0.3);
 }
 
 .card.bg-dark {
@@ -374,6 +383,9 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   border: 1px solid var(--color-border);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.experience-item ul {
+  list-style: circle !important;
 }
 
 .skills-category:hover,
@@ -437,23 +449,6 @@ footer {
   color: var(--color-text-primary);
 }
 
-.languages-spoken {
-  margin-top: 2rem;
-  border-top: 1px solid var(--color-border);
-  padding-top: 1.5rem;
-}
-
-.languages-spoken h3 {
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: var(--color-primary);
-}
-
-.languages-spoken p {
-  color: var(--color-text-secondary);
-  margin-bottom: 0.5rem;
-}
 
 .main-content ul {
   list-style: none;
@@ -462,10 +457,12 @@ footer {
 }
 
 .main-content ul li {
-  margin-bottom: 0.8rem;
-  color: var(--color-text-secondary);
-  padding: 0.8em 1.8em;
-  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  padding: 0,5rem;
+}
+
+.main-content ul li i {
+  color: var(--color-primary);
 }
 
 .main-content ul li:last-child {
