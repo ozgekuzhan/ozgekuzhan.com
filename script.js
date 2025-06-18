@@ -1,71 +1,101 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const elements = document.querySelectorAll(".floating-text");
+  const floatingElements = document.querySelectorAll(".floating-text");
   let currentIndex = 0;
-  let animationDuration = 4000;
+  const ANIMATION_DURATION = 4000;
   let displayInterval;
 
   function showNextFloatingText() {
     if (currentIndex > 0) {
-      const prevIndex = (currentIndex - 1 + elements.length) % elements.length;
-      elements[prevIndex].classList.remove("animate");
-      elements[prevIndex].style.opacity = '0';
+      const prevIndex = (currentIndex - 1 + floatingElements.length) % floatingElements.length;
+      floatingElements[prevIndex].classList.remove("animate");
     }
 
-    const currentElement = elements[currentIndex];
-
-    const top = Math.random() * 70;
-    const left = Math.random() * 70;
-
-    currentElement.style.top = `${top}%`;
-    currentElement.style.left = `${left}%`;
-    currentElement.style.opacity = '0';
-
+    const currentElement = floatingElements[currentIndex];
+    currentElement.style.top = `${Math.random() * 70}%`;
+    currentElement.style.left = `${Math.random() * 70}%`;
     currentElement.classList.add("animate");
 
-    currentIndex = (currentIndex + 1) % elements.length;
+    currentIndex = (currentIndex + 1) % floatingElements.length;
   }
 
   function startFloatingTextAnimation() {
     clearInterval(displayInterval);
-
     showNextFloatingText();
-
-    displayInterval = setInterval(showNextFloatingText, animationDuration);
+    displayInterval = setInterval(showNextFloatingText, ANIMATION_DURATION);
   }
 
   function stopFloatingTextAnimation() {
     clearInterval(displayInterval);
-    elements.forEach(el => {
+    floatingElements.forEach(el => {
       el.classList.remove("animate");
-      el.style.opacity = '0';
     });
   }
 
   startFloatingTextAnimation();
 
   document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-      stopFloatingTextAnimation();
-    } else {
-      startFloatingTextAnimation();
-    }
+    document.hidden ? stopFloatingTextAnimation() : startFloatingTextAnimation();
   });
 
   document.getElementById("current-year").textContent = new Date().getFullYear();
 
 
-  document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
+  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetElement = document.querySelector(this.getAttribute('href'));
+      targetElement?.scrollIntoView({ behavior: 'smooth' });
+    });
   });
+
+
+  function createStarfield() {
+    const container = document.getElementById('stars-background');
+
+
+    for (let i = 0; i < 1000; i++) {
+      const star = document.createElement('div');
+      star.className = 'star-static';
+
+      const size = Math.random() * 1 + 0.5;
+      Object.assign(star.style, {
+        left: Math.random() * 100 + '%',
+        top: Math.random() * 100 + '%',
+        width: size + 'px',
+        height: size + 'px',
+        opacity: Math.random() * 0.4 + 0.3
+      });
+
+      container.appendChild(star);
+    }
+
+    for (let i = 0; i < 300; i++) {
+      const star = document.createElement('div');
+      star.className = 'star-twinkle';
+
+      const x = Math.random() * 100;
+      const y = Math.random() * 100;
+
+      const distanceFromCenter = Math.sqrt(Math.pow(x - 50, 2) + Math.pow(y - 50, 2));
+      const centerProximity = 1 - (distanceFromCenter / Math.sqrt(5000));
+
+      const baseSize = Math.random() * 1.2 + 0.6;
+      const size = baseSize * (1 + centerProximity * 0.5);
+      const opacity = Math.min((Math.random() * 0.6 + 0.4) + centerProximity * 0.3, 1);
+
+      Object.assign(star.style, {
+        left: x + '%',
+        top: y + '%',
+        width: size + 'px',
+        height: size + 'px',
+        opacity: opacity,
+        animationDuration: (Math.random() * 3 + 2) + 's',
+        animationDelay: Math.random() * 4 + 's'
+      });
+
+      container.appendChild(star);
+    }
+  }
+
+  createStarfield();
 });
