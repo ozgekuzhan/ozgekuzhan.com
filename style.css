@@ -648,4 +648,9 @@ footer {
   .glightbox-clean .gslide-desc {
     font-size: 0.9rem !important;
   }
+
+  .gslide-description {
+    display: none !important;
+  }
+
 }
