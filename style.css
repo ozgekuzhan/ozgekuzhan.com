@@ -291,6 +291,7 @@ footer {
 
 .about-text p {
   color: var(--color-text-secondary);
+  margin-bottom: 0;
 }
 
 .about-header {
@@ -328,6 +329,7 @@ footer {
 .about-photo {
   flex: 1;
   text-align: center;
+  margin-top: 55px;
 }
 
 .pp {
