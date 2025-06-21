@@ -680,3 +680,10 @@ footer {
   text-decoration: none;
   color: var(--color-primary) !important;
 }
+.carousel-item img {
+    height: 250px !important;
+}
+
+.carousel-indicators {
+    bottom: -27px !important;
+}
