@@ -108,7 +108,7 @@ h3 {
 }
 
 a {
-
+  color: var(--color-text-primary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -676,7 +676,7 @@ footer {
   background-color: #555;
 }
 
-#resume h2 a {
+.resume-link {
   text-decoration: none;
-  color: var(--color-primary);
+  color: var(--color-primary) !important;
 }

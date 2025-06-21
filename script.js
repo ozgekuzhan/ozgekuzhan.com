@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   createStarfield();
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("scrollToTopBtn")
 
