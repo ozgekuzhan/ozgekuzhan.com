@@ -118,3 +118,13 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   })
 })
+
+const originalTitle = document.title;
+
+document.addEventListener("visibilitychange", function () {
+  if (document.hidden) {
+    document.title = "Hire her → Özge Kuzhan";
+  } else {
+    document.title = originalTitle;
+  }
+});

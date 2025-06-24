@@ -34,6 +34,7 @@ body {
   display: flex;
   min-height: 100vh;
   position: relative;
+  font-size: 1rem;
 }
 
 .stars-background {
@@ -98,6 +99,7 @@ h2 {
   margin-bottom: 1rem;
   text-align: left;
   color: var(--color-primary) !important;
+  font-size: 1.5rem;
 }
 
 h3 {
@@ -105,6 +107,7 @@ h3 {
   color: var(--color-primary-light);
   margin-top: 1.5rem;
   margin-bottom: 0.8rem;
+  font-size: 1.2rem;
 }
 
 a {
@@ -124,7 +127,7 @@ a:hover {
 }
 
 section {
-  padding: 2rem;
+  padding: 1.2rem;
   max-width: 800px;
   margin: auto;
 }
@@ -145,10 +148,10 @@ section {
   transition: color 0.3s ease;
 }
 
-.about-section {
-  padding: 20px;
+/* .about-section {
+  padding: 1.2rem;
   border-radius: 5%;
-}
+} */
 
 footer {
   text-align: center;
@@ -346,7 +349,7 @@ footer {
 .floating-text {
   color: var(--color-accent);
   position: absolute;
-  font-size: 1.2rem;
+  font-size: 1rem;
   opacity: 0;
   font-weight: 500;
 }
@@ -368,13 +371,13 @@ footer {
 }
 
 .card-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: var(--color-primary) !important;
 }
 
 .card-text {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: var(--color-text-secondary);
 }
@@ -410,7 +413,7 @@ footer {
 }
 
 .carousel-item img {
-  height: 300px;
+  height: 250px !important;
   object-fit: contain;
   width: 100%;
   border-radius: 8px 8px 0 0;
@@ -502,6 +505,7 @@ footer {
 .main-content ul li {
   color: var(--color-text-primary);
   padding: 0.5rem;
+  font-size: 1rem;
 }
 
 .main-content ul li i {
@@ -688,4 +692,12 @@ footer {
 
 .carousel-indicators {
     bottom: -27px !important;
+}
+
+p,
+.card-text,
+.education-item p,
+.experience-item ul li,
+.main-content ul li {
+  line-height: 1.6;
 }
