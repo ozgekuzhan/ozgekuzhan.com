@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("current-year").textContent = new Date().getFullYear();
 
-
   document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -48,10 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-
   function createStarfield() {
     const container = document.getElementById('stars-background');
-
 
     for (let i = 0; i < 1000; i++) {
       const star = document.createElement('div');
@@ -98,26 +95,24 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   createStarfield();
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("scrollToTopBtn")
+  const btn = document.getElementById("scrollToTopBtn");
 
   window.onscroll = function () {
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      btn.style.display = "block"
+      btn.style.display = "block";
     } else {
-      btn.style.display = "none"
+      btn.style.display = "none";
     }
-  }
+  };
 
   btn.addEventListener("click", function () {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
-    })
-  })
-})
+    });
+  });
+});
 
 const originalTitle = document.title;
 

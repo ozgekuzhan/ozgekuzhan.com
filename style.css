@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 
 :root {
   --color-primary: #a1c349;
@@ -121,9 +120,12 @@ p {
   line-height: 1.6;
 }
 
-a:hover {
+a:hover,
+a:focus {
   text-decoration: underline;
   color: var(--color-link-hover);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 section {
@@ -148,10 +150,6 @@ section {
   transition: color 0.3s ease;
 }
 
-/* .about-section {
-  padding: 1.2rem;
-  border-radius: 5%;
-} */
 
 footer {
   text-align: center;
@@ -195,9 +193,12 @@ footer {
   transition: all 0.3s ease;
 }
 
-.sidebar nav a:hover {
+.sidebar nav a:hover,
+.sidebar nav a:focus {
   color: var(--color-primary);
   transform: translateX(5px);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .main-content {
@@ -658,7 +659,6 @@ footer {
   .gslide-description {
     display: none !important;
   }
-
 }
 
 #scrollToTopBtn {
@@ -686,10 +686,6 @@ footer {
   text-decoration: none;
   color: var(--color-primary) !important;
 }
-.carousel-item img {
-    height: 250px !important;
-}
-
 .carousel-indicators {
     bottom: -27px !important;
 }
