@@ -96,6 +96,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
   createStarfield();
 
+  function initScrollAnimations() {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-10% 0px -10% 0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(element => {
+      observer.observe(element);
+    });
+  }
+
+  function addStaggeredAnimation() {
+    const skillsCategories = document.querySelectorAll('.skills-category');
+    
+    skillsCategories.forEach(category => {
+      const skillsItems = category.querySelectorAll('ul li');
+      skillsItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.1}s`;
+        item.classList.add('animate-on-scroll');
+      });
+    });
+  }
+
+  addStaggeredAnimation();
+  initScrollAnimations();
+
+  function logPerformanceMetrics() {
+    if ('performance' in window) {
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          const metrics = {
+            'DOM Load Time': Math.round(perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart),
+            'Page Load Time': Math.round(perfData.loadEventEnd - perfData.loadEventStart),
+            'DNS Lookup Time': Math.round(perfData.domainLookupEnd - perfData.domainLookupStart),
+            'Server Response Time': Math.round(perfData.responseEnd - perfData.requestStart)
+          };
+          
+          console.group('🚀 Portfolio Performance Metrics');
+          Object.entries(metrics).forEach(([key, value]) => {
+            console.log(`${key}: ${value}ms`);
+          });
+          console.groupEnd();
+        }, 0);
+      });
+    }
+  }
+
+  logPerformanceMetrics();
+
   const btn = document.getElementById("scrollToTopBtn");
 
   window.onscroll = function () {

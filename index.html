@@ -58,7 +58,7 @@
   <div class="main-content">
     <section id="about" class="about-section">
       <div class="about-container">
-        <div class="about-text">
+        <div class="about-text animate-on-scroll">
           <div class="about-header">
             <h2>About Me</h2>
             <div class="social-links">
@@ -73,10 +73,10 @@
             finance, purchasing, and operations management. I bring strong problem-solving skills, leadership abilities,
             and versatile work experience to create meaningful impact in the tech industry.</p>
         </div>
-        <div class="about-photo">
+        <div class="about-photo animate-on-scroll">
           <picture>
             <source srcset="img/pp.webp" type="image/webp">
-            <img src="img/pp.jpg" class="pp glightbox" alt="Özge Kuzhan's profile photo"
+            <img src="img/pp.webp" class="pp glightbox" alt="Özge Kuzhan's profile photo"
               data-glightbox="title: Özge Kuzhan; description: Full Stack Web Developer based in Amsterdam, Netherlands">
           </picture>
         </div>
@@ -84,41 +84,37 @@
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
-      <div class="row row-cols-1 row-cols-md-2 g-4">
+      <h2 class="animate-on-scroll">Projects</h2>
+      <div class="row row-cols-1 g-4">
         <div class="col">
-          <div class="card bg-dark text-white h-100">
+          <div class="card bg-dark text-white h-100 animate-on-scroll">
             <div id="dealhuntrCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <picture>
                     <source srcset="img/dealhunter/main_page.webp" type="image/webp">
-                    <img src="img/dealhunter/main_page.PNG" class="d-block w-100 glightbox" alt="DealHuntr Main Page"
-                      loading="lazy"
+                    <img src="img/dealhunter/main_page.webp" class="d-block w-100 glightbox" alt="DealHuntr Main Page" loading="lazy"
                       data-glightbox="title: DealHuntr - Main Page; description: A comprehensive deal hunting web application built with Ruby on Rails">
                   </picture>
                 </div>
                 <div class="carousel-item">
                   <picture>
                     <source srcset="img/dealhunter/expanded.webp" type="image/webp">
-                    <img src="img/dealhunter/expanded.PNG" class="d-block w-100 glightbox" alt="DealHuntr Expanded View"
-                      loading="lazy"
+                    <img src="img/dealhunter/expanded.webp" class="d-block w-100 glightbox" alt="DealHuntr Expanded View" loading="lazy"
                       data-glightbox="title: DealHuntr - Deal Details; description: Side-by-side price comparison across multiple retailers, allowing users to click and switch between different product options in the main view">
                   </picture>
                 </div>
                 <div class="carousel-item">
                   <picture>
                     <source srcset="img/dealhunter/categories.webp" type="image/webp">
-                    <img src="img/dealhunter/categories.PNG" class="d-block w-100 glightbox" alt="DealHuntr Categories"
-                      loading="lazy"
+                    <img src="img/dealhunter/categories.webp" class="d-block w-100 glightbox" alt="DealHuntr Categories" loading="lazy"
                       data-glightbox="title: DealHuntr - Categories; description: Organized deal categories for easy browsing and filtering">
                   </picture>
                 </div>
                 <div class="carousel-item">
                   <picture>
                     <source srcset="img/dealhunter/shopping_list.webp" type="image/webp">
-                    <img src="img/dealhunter/shopping_list.PNG" class="d-block w-100 glightbox"
-                      alt="DealHuntr Shopping List" loading="lazy"
+                    <img src="img/dealhunter/shopping_list.webp" class="d-block w-100 glightbox" alt="DealHuntr Shopping List" loading="lazy"
                       data-glightbox="title: DealHuntr - Shopping List; description: Selected products added to cart with retailer-based organization and total deal savings display">
                   </picture>
                 </div>
@@ -146,10 +142,9 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">DealHuntr</h5>
-              <p class="card-text">Pitched an idea for a web app, DealHuntr and completed the project in 2 weeks in a
-                team of 3.</p>
-              <p class="card-text"><strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, SQL, Git, GitHub,
-                Ruby on Rails</p>
+              <p class="card-text">Developed in a team of 3 over 2 weeks, DealHuntr is a web application designed to aggregate and display real-time product deals from multiple sources. Focused on building a responsive and interactive frontend using Hotwire (Turbo + Stimulus), Bootstrap 5, and SCSS to deliver seamless user experience.</p>
+              <p class="card-text">Implemented clean UI components, mobile-first design, and consistent styling with Simple Form and Font Awesome. Collaborated closely on backend RESTful APIs built with Ruby on Rails, utilizing PostgreSQL for data storage and SQL for efficient querying. The application was containerized with Docker and deployed on Heroku for scalable production use.</p>
+              <p class="card-text"><strong>Technologies:</strong> Ruby on Rails, PostgreSQL, Hotwire (Turbo + Stimulus), Bootstrap 5, SCSS, Docker, Heroku, Simple Form, Font Awesome</p>
             </div>
             <div class="card-footer bg-transparent border-top-0">
               <a href="https://github.com/ozgekuzhan/DealHuntr" target="_blank"
@@ -159,13 +154,13 @@
         </div>
 
         <div class="col">
-          <div class="card bg-dark text-white h-100">
+          <div class="card bg-dark text-white h-100 animate-on-scroll">
             <div id="worktreeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <picture>
                     <source srcset="img/worktree/index_page_worktree.webp" type="image/webp">
-                    <img src="img/worktree/index page worktree.jpg" class="d-block w-100 glightbox"
+                    <img src="img/worktree/index_page_worktree.webp" class="d-block w-100 glightbox"
                       alt="WorkTree Index Page" loading="lazy"
                       data-glightbox="title: WorkTree - Landing Page; description: Modern office rental platform homepage with intuitive design">
                   </picture>
@@ -173,7 +168,7 @@
                 <div class="carousel-item">
                   <picture>
                     <source srcset="img/worktree/rent_page_worktree.webp" type="image/webp">
-                    <img src="img/worktree/rent page  worktree.jpg" class="d-block w-100 glightbox"
+                    <img src="img/worktree/rent_page_worktree.webp" class="d-block w-100 glightbox"
                       alt="WorkTree Rent Page" loading="lazy"
                       data-glightbox="title: WorkTree - Office Listings; description: Dynamic availability calendar for the selected office">
                   </picture>
@@ -181,7 +176,7 @@
                 <div class="carousel-item">
                   <picture>
                     <source srcset="img/worktree/dashboard.webp" type="image/webp">
-                    <img src="img/worktree/dashboard.JPG" class="d-block w-100 glightbox"
+                    <img src="img/worktree/dashboard.webp" class="d-block w-100 glightbox"
                       alt="WorkTree Dashboard" loading="lazy"
                       data-glightbox="title: WorkTree - User Dashboard; description: Dynamic user interface adapting to owner or renter permissions with relevant dashboard components">
                   </picture>
@@ -208,10 +203,9 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">WorkTree</h5>
-              <p class="card-text">Designed, implemented and shipped to production a clone of AirBnB but for offices in
-                4 days. </p>
-              <p class="card-text"><strong>Technologies:</strong> HTML, CSS, Bootstrap, JavaScript, SQL, Git, GitHub,
-                Heroku, Ruby on Rails</p>
+              <p class="card-text">Designed and delivered in a focused 5-day sprint by a team of three, WorkTree is an innovative platform that streamlines the process of reserving office and coworking spaces. Leveraging Hotwire (Turbo + Stimulus) and Bootstrap 5, I developed a highly responsive and user-friendly frontend that enables real-time updates and smooth navigation without heavy JavaScript frameworks.</p>
+              <p class="card-text">The backend, powered by Ruby on Rails and PostgreSQL, provides robust RESTful APIs for secure user authentication (via Devise) and efficient reservation management. Containerized with Docker and deployed on Heroku, the system is built for scalability and reliability, supporting seamless booking experiences for modern workplaces.</p>
+              <p class="card-text"><strong>Technologies:</strong> Ruby on Rails, PostgreSQL, Hotwire (Turbo + Stimulus), Bootstrap 5, Docker, Heroku, Devise, RESTful APIs</p>
             </div>
             <div class="card-footer bg-transparent border-top-0">
               <a href="https://github.com/ozgekuzhan/worktree" target="_blank" class="btn btn-outline-light btn-sm">View
@@ -221,7 +215,7 @@
         </div>
 
         <div class="col">
-          <div class="card bg-dark text-white h-100">
+          <div class="card bg-dark text-white h-100 animate-on-scroll">
             <div class="card-body">
               <h5 class="card-title">Independent Software Projects</h5>
               <p class="card-text">Developed various small-scale websites (HTML, CSS, JavaScript). Provided support in
@@ -235,27 +229,60 @@
     </section>
 
     <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills-category">
-        <h3>Technical Skills</h3>
+      <h2 class="animate-on-scroll">Skills</h2>
+      <div class="skills-category animate-on-scroll">
+        <h3>Programming Languages & Frameworks</h3>
         <ul>
           <li>JavaScript</li>
+          <li>Ruby</li>
+          <li>HTML & CSS</li>
           <li>Ruby on Rails</li>
           <li>React</li>
-          <li>HTML/CSS</li>
-          <li>SQL</li>
+          <li>Vue.js</li>
+          <li>Hotwire</li>
+          <li>JSON</li>
+        </ul>
+      </div>
+      <div class="skills-category animate-on-scroll">
+        <h3>Databases & Tools</h3>
+        <ul>
           <li>PostgreSQL</li>
-          <li>Git & GitHub</li>
-          <li>Bootstrap</li>
-          <li>Ruby</li>
-          <li>Figma</li>
+          <li>SQL</li>
+          <li>GitHub</li>
           <li>Heroku</li>
           <li>Copilot</li>
+          <li>OpenAI API</li>
+          <li>Claude Code</li>
           <li>WordPress</li>
+        </ul>
+      </div>
+      <div class="skills-category animate-on-scroll">
+        <h3>Frontend & Design</h3>
+        <ul>
+          <li>Bootstrap</li>
+          <li>SCSS</li>
+          <li>Figma</li>
+          <li>DOM Manipulation</li>
+          <li>RESTful API</li>
+          <li>Responsive Design</li>
+          <li>UI/UX Design</li>
           <li>Microsoft Office</li>
         </ul>
       </div>
-      <div class="skills-category">
+      <div class="skills-category animate-on-scroll">
+        <h3>Development Concepts</h3>
+        <ul>
+          <li>CRUD Operations</li>
+          <li>OOP (Object-Oriented Programming)</li>
+          <li>MVC Architecture</li>
+          <li>RESTful API Design</li>
+          <li>Database Design</li>
+          <li>Version Control</li>
+          <li>Agile Development</li>
+          <li>Full-Stack Development</li>
+        </ul>
+      </div>
+      <div class="skills-category animate-on-scroll">
         <h3>Business & Soft Skills</h3>
         <ul>
           <li>Marketing Strategy</li>
