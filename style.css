@@ -469,12 +469,15 @@ footer {
 .card.bg-dark {
   background-color: var(--color-card-bg) !important;
   border: 1px solid var(--color-border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .card.bg-dark:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.2);
 }
 
 .card.bg-dark {
@@ -550,12 +553,12 @@ footer {
 .education-item,
 .experience-item {
   background-color: var(--color-card-bg);
-  padding: 1.5rem;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--color-border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .experience-item ul {
@@ -591,16 +594,16 @@ footer {
 }
 
 .skills-category ul li {
-  background-color: var(--color-card-bg);
+  background-color: var(--color-surface);
   color: var(--color-text-secondary);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 0.8em 1.8em;
-  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
   white-space: nowrap;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .skills-category ul li.animate-on-scroll {
