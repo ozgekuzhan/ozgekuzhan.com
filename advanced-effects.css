@@ -1,0 +1,190 @@
+* {
+    cursor: default !important;
+}
+
+.project-card,
+.about-card,
+.skill-category {
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.project-card:hover,
+.about-card:hover,
+.skill-category:hover {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(10px);
+}
+
+.animate-in {
+    animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.glass-enhanced {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow:
+        0 8px 32px 0 rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+}
+
+.neon-glow {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3),
+                 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.cyberpunk-grid {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.liquid-morph {
+    border-radius: 0;
+}
+
+.energy-pulse {
+    position: relative;
+    overflow: hidden;
+}
+
+.energy-pulse::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+    animation: energy-sweep 3s ease-in-out infinite;
+}
+
+@keyframes energy-sweep {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.particle-trail::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: particle-expand 1.5s ease-out infinite;
+    pointer-events: none;
+}
+
+@keyframes particle-expand {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 80px;
+        height: 80px;
+        opacity: 0;
+    }
+}
+
+.holographic {
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 0, 0, 0.02) 50%, transparent 70%);
+    background-size: 20px 20px;
+    animation: holographic-shift 4s ease-in-out infinite;
+}
+
+@keyframes holographic-shift {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 40px 40px;
+    }
+}
+
+.project-card,
+.about-card,
+.skill-category,
+.btn,
+.skill-item {
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@media (max-width: 768px) {
+    .energy-pulse::before,
+    .particle-trail::before,
+    .holographic {
+        animation: none;
+        display: none;
+    }
+
+    .project-card:hover,
+    .about-card:hover,
+    .skill-category:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .holographic,
+    .particle-trail,
+    .energy-pulse {
+        animation: none !important;
+    }
+
+    .project-card,
+    .about-card,
+    .skill-category {
+        transition: none !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .glass-enhanced {
+        background: rgba(255, 255, 255, 1);
+        border: 2px solid #000000;
+    }
+
+    .energy-pulse::before,
+    .particle-trail::before,
+    .holographic {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .glass-enhanced {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .cyberpunk-grid {
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    }
+}

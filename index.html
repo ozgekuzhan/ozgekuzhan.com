@@ -1,415 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-    content="Portfolio of Özge Kuzhan, a Full Stack Web Developer skilled in Ruby on Rails, JavaScript, and Bootstrap.">
-  <meta name="keywords"
-    content="web developer, portfolio, Özge Kuzhan, full stack, Ruby on Rails, JavaScript, web development bootcamp, Amsterdam, marketing, finance, operations, problem-solving, leadership">
-  <meta name="author" content="Özge Kuzhan">
-  <meta property="og:title" content="Özge Kuzhan | Full Stack Web Developer">
-  <meta property="og:description"
-    content="Hey, I'm Özge Kuzhan. This is where I share what I’ve been building with Ruby on Rails, JavaScript, and a bit of humor — whether you’re hiring, learning, or just curious, you’re welcome here.">
-  <meta property="og:image" content="img/pp.jpg">
-  <meta property="og:url" content="https://yourwebsite.com">
-  <meta name="format-detection" content="telephone=no">
-  <title>Özge Kuzhan | Full Stack Web Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Numans&display=swap" rel="stylesheet">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Özge Kuzhan, a Full Stack Web Developer skilled in Ruby on Rails, JavaScript, and Bootstrap.">
+    <meta name="keywords" content="web developer, portfolio, Özge Kuzhan, full stack, Ruby on Rails, JavaScript, web development bootcamp, Amsterdam, marketing, finance, operations, problem-solving, leadership">
+    <meta name="author" content="Özge Kuzhan">
+    <meta property="og:title" content="Özge Kuzhan | Full Stack Web Developer">
+    <meta property="og:description" content="Hey, I'm Özge Kuzhan. This is where I share what I've been building with Ruby on Rails, JavaScript, and a bit of humor — whether you're hiring, learning, or just curious, you're welcome here.">
+    <meta property="og:image" content="img/pp.jpg">
+    <title>Özge Kuzhan | Full Stack Developer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-  <div class="stars-background" id="stars-background"></div>
-
-  <div class="sidebar">
-    <header>
-      <h1>Ozge Kuzhan</h1>
-      <p id="header-text">Full Stack Web Developer</p>
-    </header>
-    <nav role="navigation">
-      <a href="#about" aria-label="About Me section" tabindex="1">About Me</a>
-      <a href="#projects" aria-label="Projects section" tabindex="2">Projects</a>
-      <a href="#skills" aria-label="Skills section" tabindex="3">Skills</a>
-      <a href="#education" aria-label="Education section" tabindex="4">Education</a>
-      <a href="#experience" aria-label="Experience section" tabindex="5">Experience</a>
-      <a href="#resume" aria-label="Resume section" tabindex="6">Resume</a>
-      <a href="#contact" aria-label="Contact section" tabindex="7">Contact</a>
+    <nav class="nav-minimal">
+        <div class="nav-content">
+            <h1 class="logo">ÖK</h1>
+            <a href="ozgekuzhanResume.pdf" class="btn-download" download>
+                <i class="fas fa-download"></i>
+                Resume
+            </a>
+        </div>
     </nav>
 
-    <span class="floating-text">Hire her</span>
-    <span class="floating-text">Give her a chance</span>
-    <span class="floating-text">Hire her</span>
-    <span class="floating-text">Your next dev</span>
-    <span class="floating-text">Hire her</span>
-    <span class="floating-text">Let her code for you</span>
-    <span class="floating-text">Hire her</span>
-    <span class="floating-text">Why not?</span>
-  </div>
+    <main class="grid-container">
+        <section class="section hero-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; min-height: 60vh;">
+            <div>
+                <span class="label">Full Stack Developer / Product Owner</span>
+                <h1 class="title">Özge Kuzhan</h1>
+                <p class="subtitle">Full Stack Developer in Amsterdam specializing in JavaScript, React, Ruby on Rails, and responsive web design. Building production-ready applications with focus on intuitive UI/UX and clean code architecture.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary">Get in touch</a>
+                    <a href="https://github.com/ozgekuzhan" target="_blank" class="btn-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ozgekuzhan" target="_blank" class="btn-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div style="position: relative;">
+                <img src="img/pp.webp" alt="Özge Kuzhan" style="width: 100%; height: 500px; object-fit: cover; filter: grayscale(100%);">
+            </div>
+        </section>
 
-  <div class="main-content">
-    <section id="about" class="about-section">
-      <div class="about-container">
-        <div class="about-text animate-on-scroll">
-          <div class="about-header">
-            <h2>About Me</h2>
-            <div class="social-links">
-              <a href="https://github.com/ozgekuzhan" target="_blank" aria-label="GitHub Profile" tabindex="8"><i class="fa-brands fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/ozgekuzhan" target="_blank" aria-label="LinkedIn Profile" tabindex="9"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-          </div>
-          <p>I am a dynamic and results-oriented professional based in the Netherlands, holding a bachelor's degree in
-            International Relations and currently transitioning into a career in software development. I am enrolled in
-            the Le Wagon Amsterdam Full Stack Web Development bootcamp, while also actively pursuing self-learning
-            through platforms like Udemy over the past two years. Previously, I held successful roles in marketing,
-            finance, purchasing, and operations management. I bring strong problem-solving skills, leadership abilities,
-            and versatile work experience to create meaningful impact in the tech industry.</p>
-        </div>
-        <div class="about-photo animate-on-scroll">
-          <picture>
-            <source srcset="img/pp.webp" type="image/webp">
-            <img src="img/pp.webp" class="pp glightbox" alt="Özge Kuzhan's profile photo"
-              data-glightbox="title: Özge Kuzhan; description: Full Stack Web Developer based in Amsterdam, Netherlands">
-          </picture>
-        </div>
-      </div>
-    </section>
+        <section class="section-narrow">
+            <span class="label">About</span>
+            <h2>Background</h2>
+            <p>Full Stack Developer with strong background in <strong>Product Management</strong> and client communication. Le Wagon Amsterdam graduate (400+ hours) with 500+ additional hours of self-directed learning. Proven ability to manage full development lifecycle from concept to deployment, delivering practical solutions that balance technical excellence with user needs.</p>
+        </section>
 
-    <section id="projects">
-      <h2 class="animate-on-scroll">Projects</h2>
-      <div class="row row-cols-1 g-4">
-        <div class="col">
-          <div class="card bg-dark text-white h-100 animate-on-scroll">
-            <div id="dealhuntrCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <picture>
-                    <source srcset="img/dealhunter/main_page.webp" type="image/webp">
-                    <img src="img/dealhunter/main_page.webp" class="d-block w-100 glightbox" alt="DealHuntr Main Page" loading="lazy"
-                      data-glightbox="title: DealHuntr - Main Page; description: A comprehensive deal hunting web application built with Ruby on Rails">
-                  </picture>
-                </div>
-                <div class="carousel-item">
-                  <picture>
-                    <source srcset="img/dealhunter/expanded.webp" type="image/webp">
-                    <img src="img/dealhunter/expanded.webp" class="d-block w-100 glightbox" alt="DealHuntr Expanded View" loading="lazy"
-                      data-glightbox="title: DealHuntr - Deal Details; description: Side-by-side price comparison across multiple retailers, allowing users to click and switch between different product options in the main view">
-                  </picture>
-                </div>
-                <div class="carousel-item">
-                  <picture>
-                    <source srcset="img/dealhunter/categories.webp" type="image/webp">
-                    <img src="img/dealhunter/categories.webp" class="d-block w-100 glightbox" alt="DealHuntr Categories" loading="lazy"
-                      data-glightbox="title: DealHuntr - Categories; description: Organized deal categories for easy browsing and filtering">
-                  </picture>
-                </div>
-                <div class="carousel-item">
-                  <picture>
-                    <source srcset="img/dealhunter/shopping_list.webp" type="image/webp">
-                    <img src="img/dealhunter/shopping_list.webp" class="d-block w-100 glightbox" alt="DealHuntr Shopping List" loading="lazy"
-                      data-glightbox="title: DealHuntr - Shopping List; description: Selected products added to cart with retailer-based organization and total deal savings display">
-                  </picture>
-                </div>
-              </div>
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#dealhuntrCarousel" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#dealhuntrCarousel" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#dealhuntrCarousel" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#dealhuntrCarousel" data-bs-slide-to="3"
-                  aria-label="Slide 4"></button>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#dealhuntrCarousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#dealhuntrCarousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+        <div class="section" style="display: flex; gap: 2rem; justify-content: center;">
+            <div class="stat">
+                <h2>500+</h2>
+                <p>Hours Coding</p>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">DealHuntr</h5>
-              <p class="card-text">Developed in a team of 3 over 2 weeks, DealHuntr is a web application designed to aggregate and display real-time product deals from multiple sources. Focused on building a responsive and interactive frontend using Hotwire (Turbo + Stimulus), Bootstrap 5, and SCSS to deliver seamless user experience.</p>
-              <p class="card-text">Implemented clean UI components, mobile-first design, and consistent styling with Simple Form and Font Awesome. Collaborated closely on backend RESTful APIs built with Ruby on Rails, utilizing PostgreSQL for data storage and SQL for efficient querying. The application was containerized with Docker and deployed on Heroku for scalable production use.</p>
-              <p class="card-text"><strong>Technologies:</strong> Ruby on Rails, PostgreSQL, Hotwire (Turbo + Stimulus), Bootstrap 5, SCSS, Docker, Heroku, Simple Form, Font Awesome</p>
+            <div class="stat">
+                <h2>10+</h2>
+                <p>Apps Built</p>
             </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <a href="https://github.com/ozgekuzhan/DealHuntr" target="_blank"
-                class="btn btn-outline-light btn-sm">View Project on GitHub</a>
-            </div>
-          </div>
         </div>
 
-        <div class="col">
-          <div class="card bg-dark text-white h-100 animate-on-scroll">
-            <div id="worktreeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <picture>
-                    <source srcset="img/worktree/index_page_worktree.webp" type="image/webp">
-                    <img src="img/worktree/index_page_worktree.webp" class="d-block w-100 glightbox"
-                      alt="WorkTree Index Page" loading="lazy"
-                      data-glightbox="title: WorkTree - Landing Page; description: Modern office rental platform homepage with intuitive design">
-                  </picture>
-                </div>
-                <div class="carousel-item">
-                  <picture>
-                    <source srcset="img/worktree/rent_page_worktree.webp" type="image/webp">
-                    <img src="img/worktree/rent_page_worktree.webp" class="d-block w-100 glightbox"
-                      alt="WorkTree Rent Page" loading="lazy"
-                      data-glightbox="title: WorkTree - Office Listings; description: Dynamic availability calendar for the selected office">
-                  </picture>
-                </div>
-                <div class="carousel-item">
-                  <picture>
-                    <source srcset="img/worktree/dashboard.webp" type="image/webp">
-                    <img src="img/worktree/dashboard.webp" class="d-block w-100 glightbox"
-                      alt="WorkTree Dashboard" loading="lazy"
-                      data-glightbox="title: WorkTree - User Dashboard; description: Dynamic user interface adapting to owner or renter permissions with relevant dashboard components">
-                  </picture>
-                </div>
-              </div>
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#worktreeCarousel" data-bs-slide-to="0" class="active"
-                  aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#worktreeCarousel" data-bs-slide-to="1"
-                  aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#worktreeCarousel" data-bs-slide-to="2"
-                  aria-label="Slide 3"></button>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#worktreeCarousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#worktreeCarousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">WorkTree</h5>
-              <p class="card-text">Designed and delivered in a focused 5-day sprint by a team of three, WorkTree is an innovative platform that streamlines the process of reserving office and coworking spaces. Leveraging Hotwire (Turbo + Stimulus) and Bootstrap 5, I developed a highly responsive and user-friendly frontend that enables real-time updates and smooth navigation without heavy JavaScript frameworks.</p>
-              <p class="card-text">The backend, powered by Ruby on Rails and PostgreSQL, provides robust RESTful APIs for secure user authentication (via Devise) and efficient reservation management. Containerized with Docker and deployed on Heroku, the system is built for scalability and reliability, supporting seamless booking experiences for modern workplaces.</p>
-              <p class="card-text"><strong>Technologies:</strong> Ruby on Rails, PostgreSQL, Hotwire (Turbo + Stimulus), Bootstrap 5, Docker, Heroku, Devise, RESTful APIs</p>
-            </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <a href="https://github.com/ozgekuzhan/worktree" target="_blank" class="btn btn-outline-light btn-sm">View
-                Project on GitHub</a>
-            </div>
-          </div>
-        </div>
+        <section class="section-narrow">
+            <h2 class="section-title" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gray-600); margin-bottom: 3rem;">Selected Projects</h2>
 
-        <div class="col">
-          <div class="card bg-dark text-white h-100 animate-on-scroll">
-            <div class="website-preview">
-              <iframe src="https://shadewell.ca" title="Shadewell.ca Website Preview" loading="lazy"></iframe>
-              <div class="website-overlay">
-                <a href="https://shadewell.ca" target="_blank" class="website-link">
-                  <i class="fas fa-external-link-alt"></i>
-                  Visit shadewell.ca
+            <div style="margin-bottom: 4rem;">
+                <span class="label">2-Week Team Project</span>
+                <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">DealHuntr</h3>
+                <p style="margin-bottom: 1.5rem; line-height: 1.8;">Web application aggregating real-time product deals • Built with Ruby on Rails, PostgreSQL, Hotwire</p>
+                <div class="tech-stack" style="margin-bottom: 1.5rem;">
+                    <span>Rails</span>
+                    <span>PostgreSQL</span>
+                    <span>Hotwire</span>
+                </div>
+                <div class="project-images">
+                    <img src="img/dealhunter/main_page.webp" alt="DealHuntr Main" style="height: 300px; width: auto; object-fit: cover;">
+                    <img src="img/dealhunter/categories.webp" alt="DealHuntr Categories" style="height: 300px; width: auto; object-fit: cover;">
+                    <img src="img/dealhunter/shopping_list.webp" alt="DealHuntr Shopping List" style="height: 300px; width: auto; object-fit: cover;">
+                    <img src="img/dealhunter/expanded.webp" alt="DealHuntr Expanded" style="height: 300px; width: auto; object-fit: cover;">
+                </div>
+                <a href="https://github.com/ozgekuzhan/DealHuntr" target="_blank" class="btn-link">
+                    View on GitHub <i class="fas fa-arrow-right"></i>
                 </a>
-              </div>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Independent Software Projects</h5>
-              <p class="card-text">Developed various small-scale websites including <strong>Shadewell.ca</strong>, a modern window treatment company website featuring responsive design, engaging UI, and professional branding. Provided support in the development of software projects using HTML, CSS, JavaScript, and modern web technologies.</p>
-              <p class="card-text">Continuously learned and adapted to new technologies while contributing to UI design and development projects using Figma, improving user experience and interface consistency across multiple client projects.</p>
+
+            <div>
+                <span class="label">5-Day Sprint</span>
+                <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">WorkTree</h3>
+                <p style="margin-bottom: 1.5rem; line-height: 1.8;">Platform for reserving office and coworking spaces • Airbnb-style marketplace application</p>
+                <div class="tech-stack" style="margin-bottom: 1.5rem;">
+                    <span>Rails</span>
+                    <span>Devise</span>
+                    <span>Docker</span>
+                </div>
+                <div class="project-images">
+                    <img src="img/worktree/index_page_worktree.webp" alt="WorkTree Index" style="height: 300px; width: auto; object-fit: cover;">
+                    <img src="img/worktree/rent_page_worktree.webp" alt="WorkTree Rent" style="height: 300px; width: auto; object-fit: cover;">
+                    <img src="img/worktree/dashboard.webp" alt="WorkTree Dashboard" style="height: 300px; width: auto; object-fit: cover;">
+                </div>
+                <a href="https://github.com/ozgekuzhan/worktree" target="_blank" class="btn-link">
+                    View on GitHub <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <a href="https://shadewell.ca" target="_blank" class="btn btn-outline-light btn-sm">View Live Website</a>
-              <a href="https://github.com/ozgekuzhan/ShadeWell" target="_blank" class="btn btn-outline-light btn-sm">View on GitHub</a>
+        </section>
+
+        <section class="section-narrow">
+            <h2 class="section-title" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gray-600); margin-bottom: 3rem;">Technical Skills</h2>
+
+            <div style="margin-bottom: 3rem;">
+                <span class="label">Frontend</span>
+                <p style="line-height: 1.8; margin-bottom: 0;">JavaScript • React • HTML5 • CSS3 • SCSS • Vue.js • Bootstrap • Responsive Design • DOM Manipulation • TypeScript</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="skills">
-      <h2 class="animate-on-scroll">Skills</h2>
-      <div class="skills-category animate-on-scroll">
-        <h3>Programming Languages & Frameworks</h3>
-        <ul>
-          <li>JavaScript</li>
-          <li>Ruby</li>
-          <li>HTML & CSS</li>
-          <li>Ruby on Rails</li>
-          <li>React</li>
-          <li>Vue.js</li>
-          <li>Hotwire</li>
-          <li>JSON</li>
-        </ul>
-      </div>
-      <div class="skills-category animate-on-scroll">
-        <h3>Databases & Tools</h3>
-        <ul>
-          <li>PostgreSQL</li>
-          <li>SQL</li>
-          <li>GitHub</li>
-          <li>Heroku</li>
-          <li>Copilot</li>
-          <li>OpenAI API</li>
-          <li>Claude Code</li>
-          <li>WordPress</li>
-        </ul>
-      </div>
-      <div class="skills-category animate-on-scroll">
-        <h3>Frontend & Design</h3>
-        <ul>
-          <li>Bootstrap</li>
-          <li>SCSS</li>
-          <li>Figma</li>
-          <li>DOM Manipulation</li>
-          <li>RESTful API</li>
-          <li>Responsive Design</li>
-          <li>UI/UX Design</li>
-          <li>Microsoft Office</li>
-        </ul>
-      </div>
-      <div class="skills-category animate-on-scroll">
-        <h3>Development Concepts</h3>
-        <ul>
-          <li>CRUD Operations</li>
-          <li>OOP (Object-Oriented Programming)</li>
-          <li>MVC Architecture</li>
-          <li>RESTful API Design</li>
-          <li>Database Design</li>
-          <li>Version Control</li>
-          <li>Agile Development</li>
-          <li>Full-Stack Development</li>
-        </ul>
-      </div>
-      <div class="skills-category animate-on-scroll">
-        <h3>Business & Soft Skills</h3>
-        <ul>
-          <li>Marketing Strategy</li>
-          <li>Financial Planning</li>
-          <li>Purchasing Management</li>
-          <li>Operations Coordination</li>
-          <li>Project Management</li>
-          <li>Team Leadership</li>
-          <li>Communication</li>
-          <li>Problem Solving</li>
-          <li>Adaptability</li>
-          <li>Time Management</li>
-          <li>UX Collaboration</li>
-        </ul>
-      </div>
-    </section>
+            <div style="margin-bottom: 3rem;">
+                <span class="label">Backend</span>
+                <p style="line-height: 1.8; margin-bottom: 0;">Python • Ruby • Ruby on Rails • RESTful API • CRUD Operations • OOP • MVC Architecture • JSON</p>
+            </div>
 
-    <section id="education">
-      <h2>Education</h2>
-      <div class="education-item">
-        <h3>Full Stack Web Development</h3>
-        <p><strong>Le Wagon Amsterdam</strong>, Amsterdam, Netherlands</p>
-        <p>01/2025 - 03/2025</p>
-        <p>9-week full time intensive coding bootcamp. Learned and used HTML, CSS, Bootstrap, JavaScript, SQL, Git,
-          GitHub, Heroku and Ruby on Rails.</p>
-      </div>
-      <div class="education-item">
-        <h3>Web Development Bootcamp HTML, CSS, JavaScript, React</h3>
-        <p><strong>Udemy - Colt Steele's Web Development Bootcamp</strong>, Online</p>
-        <p>05/2023 - 12/2024</p>
-      </div>
-      <div class="education-item">
-        <h3>Full Stack Developer Certificate (FDCC)</h3>
-        <p><strong>Code Institute</strong>, Online</p>
-        <p>5 days challenge of HTML, CSS, JavaScript</p>
-        <p>05/2023 - 05/2023</p>
-      </div>
-      <div class="education-item">
-        <h3>Bachelor's Degree - International Relations</h3>
-        <p><strong>Trakya University</strong>, Turkey</p>
-        <p>09/2012 - 06/2018</p>
-      </div>
-    </section>
+            <div style="margin-bottom: 3rem;">
+                <span class="label">Database</span>
+                <p style="line-height: 1.8; margin-bottom: 0;">SQL • PostgreSQL • Database Design</p>
+            </div>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="experience-item">
-        <h3>Independent Software Projects</h3>
-        <p>Remote</p>
-        <p>07/2023 - Present</p>
-        <ul>
-          <li>Developed various small-scale websites (HTML, CSS, JavaScript)</li>
-          <li>Provided support in the development of a software project</li>
-          <li>Continuously learned and adapted to new technologies</li>
-          <li>Contributed to UI design and development projects using Figma, improving user experience and interface
-            consistency</li>
-        </ul>
-      </div>
+            <div style="margin-bottom: 3rem;">
+                <span class="label">DevOps & Cloud</span>
+                <p style="line-height: 1.8; margin-bottom: 0;">Git • GitHub • Docker • Heroku • AWS • CI/CD • Version Control</p>
+            </div>
 
-      <div class="experience-item">
-        <h3>Co-Founder</h3>
-        <p><strong>Wiineed Software</strong>, Istanbul, Turkey</p>
-        <p>07/2020 - 03/2023</p>
-        <ul>
-          <li> Managed the project presentation to angel investors</li>
-          <li>Developed marketing strategies to increase brand awareness</li>
-          <li>Prepared business plans and determined company growth strategies</li>
-          <li>Managed all financial processes and monitored financial operations</li>
-        </ul>
-      </div>
+            <div style="margin-bottom: 3rem;">
+                <span class="label">Tools & AI</span>
+                <p style="line-height: 1.8; margin-bottom: 0;">Copilot • Claude Code • OpenAI API • Agile/Scrum • JIRA • Confluence • Figma</p>
+            </div>
 
-      <div class="experience-item">
-        <h3>Purchasing and Operation Manager</h3>
-        <p><strong>Master Servis Facility Management</strong>, Istanbul, Turkey</p>
-        <p>05/2019 - 06/2020</p>
-        <ul>
-          <li>Led and managed all operational processes for a workforce of 2,000 personnel, ensuring efficiency and
-            productivity</li>
-          <li>Conducted site visits and project inspections to maintain quality standards and compliance</li>
-          <li>Oversaw and optimized end-to-end purchasing processes, reducing costs and improving operational workflow
-          </li>
-        </ul>
-      </div>
-    </section>
+            <div style="margin-bottom: 5rem;">
+                <span class="label">Design & Collaboration</span>
+                <p style="line-height: 1.8; margin-bottom: 0;">Figma • UI/UX Design • Wireframing</p>
+            </div>
 
-    <section id="resume">
-      <h2> <a href="OzgeKuzhanResume.pdf" target="_blank" rel="noopener noreferrer" class="resume-link">Resume</a> 👈🏻 </h2>
-    </section>
+            <h2 class="section-title" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gray-600); margin-bottom: 3rem;">Business & Soft Skills</h2>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <ul>
-        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:ozgekuzhan@gmail.com">ozgekuzhan@gmail.com</a></li>
-        <li><i class="fa-brands fa-github"></i> <a href="https://github.com/ozgekuzhan"
-            target="_blank">github.com/ozgekuzhan</a></li>
-        <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/ozgekuzhan"
-            target="_blank">linkedin.com/in/ozgekuzhan</a></li>
-        <li><i class="fa-solid fa-location-dot"></i> Amsterdam, Netherlands</li>
-      </ul>
-    </section>
+            <div style="margin-bottom: 5rem;">
+                <p style="line-height: 1.8; margin-bottom: 0;">Marketing Strategy • Financial Planning • Purchasing Management • Operations Coordination • Project Management • Team Leadership • Communication • Problem Solving • Adaptability • Time Management</p>
+            </div>
 
-    <footer>
-      <p>© <span id="current-year"></span> Ozge Kuzhan</p>
-    </footer>
-  </div>
+            <h2 class="section-title" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gray-600); margin-bottom: 3rem;">Experience</h2>
+            <div style="margin-bottom: 4rem;">
+                <span class="label">Jul 2023 - Present</span>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Full Stack Web Developer</h3>
+                <p style="font-weight: 600; margin-bottom: 1rem;">Freelance & Portfolio Development</p>
+                <ul style="line-height: 1.8; padding-left: 1.5rem; margin-bottom: 0;">
+                    <li>Completed Le Wagon Amsterdam intensive bootcamp (400+ hours) building two production applications</li>
+                    <li>Developed over 10 web applications using JavaScript, React, Ruby on Rails, and PostgreSQL</li>
+                    <li>500+ hours of self-directed learning through Udemy bootcamps and hands-on projects</li>
+                </ul>
+            </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script>
-    const lightbox = GLightbox({
-      selector: '.glightbox'
-    });
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-  </script>
-  <script src="script.js"></script>
-  <button id="scrollToTopBtn" title="Yukarı Çık" aria-label="Scroll to top" tabindex="10">↑</button>
+            <div style="margin-bottom: 4rem;">
+                <span class="label">Jul 2020 - Mar 2023</span>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Co-Founder & Product Manager</h3>
+                <p style="font-weight: 600; margin-bottom: 1rem;">Wiineed Software, Istanbul</p>
+                <ul style="line-height: 1.8; padding-left: 1.5rem; margin-bottom: 0;">
+                    <li>Co-founded B2B SaaS company developing custom software solutions for driving schools</li>
+                    <li>Led product development from requirements gathering to deployment</li>
+                    <li>Achieved 20% market penetration in Istanbul's driving school sector</li>
+                    <li>Managed full product lifecycle including feature prioritization, roadmap planning, and go-to-market strategy</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 5rem;">
+                <span class="label">2013 - 2020</span>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Operations & Business Management</h3>
+                <p style="font-weight: 600; margin-bottom: 1rem;">British American Tobacco, Master Servis, Mystaff HR</p>
+                <ul style="line-height: 1.8; padding-left: 1.5rem; margin-bottom: 0;">
+                    <li>7 years of progressive experience in operations management, B2B sales, and client relations</li>
+                    <li>Led operational processes for 2,000+ personnel</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gray-600); margin-bottom: 3rem;">Education</h2>
+
+            <div style="margin-bottom: 3rem;">
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Le Wagon Amsterdam</h3>
+                <p style="line-height: 1.8;"><strong>Full Stack Web Development</strong> • Mar 2025 • 9-week full-time intensive coding bootcamp • Learned HTML, CSS, Bootstrap, JavaScript, SQL, Git, GitHub, Heroku and Ruby on Rails • Designed, implemented and shipped to production a clone of Airbnb but for offices, WorkTree • Pitched an idea for a web app, DealHuntr and completed the project in 2 weeks in a team of 3</p>
+            </div>
+
+            <div style="margin-bottom: 3rem;">
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Codam Amsterdam</h3>
+                <p style="line-height: 1.8;"><strong>Python Bootcamp</strong> • Jul 2025 • 1-week intensive Python Bootcamp</p>
+            </div>
+
+            <div>
+                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Udemy - Colt Steele</h3>
+                <p style="line-height: 1.8;"><strong>Web Development Bootcamp</strong> • May 2023 - Dec 2024 • Web Development Bootcamp covering HTML, CSS, JavaScript, React</p>
+            </div>
+        </section>
+
+        <section class="section-narrow" id="contact" style="text-align: center;">
+            <span class="label">Contact</span>
+            <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 3rem; line-height: 1.2;">Let's work<br>together</h2>
+            <div style="margin-bottom: 3rem;">
+                <a href="mailto:ozgekuzhan@gmail.com" style="font-size: 1.25rem; color: var(--color-black); text-decoration: none; font-weight: 600; display: block; margin-bottom: 1rem;">
+                    ozgekuzhan@gmail.com
+                </a>
+                <p style="color: var(--color-gray-600);">Amsterdam, Netherlands</p>
+            </div>
+            <div class="social-links" style="justify-content: center;">
+                <a href="https://github.com/ozgekuzhan" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ozgekuzhan" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </section>
+
+        <footer class="section" style="text-align: center; padding: 2rem 0; border-top: 1px solid var(--color-gray-300); margin-top: 4rem;">
+            <p style="font-size: 0.875rem; color: var(--color-gray-600);">&copy; <span id="current-year"></span> Özge Kuzhan • Designed & Built in Amsterdam</p>
+        </footer>
+    </main>
+
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close">&times;</span>
+        <button class="modal-nav modal-prev">&#10094;</button>
+        <button class="modal-nav modal-next">&#10095;</button>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
