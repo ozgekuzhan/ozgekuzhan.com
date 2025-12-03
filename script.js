@@ -1,15 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Set current year in footer
     const currentYearElement = document.getElementById('current-year');
     if (currentYearElement) {
         currentYearElement.textContent = new Date().getFullYear();
     }
 
-    const gridItems = document.querySelectorAll('.grid-item');
-    gridItems.forEach((item, index) => {
-        item.style.animationDelay = `${index * 0.05}s`;
-        item.classList.add('fade-in');
-    });
-
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -108,23 +104,68 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Scroll to top button
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Project images scroll arrows
+    const projectImageContainers2 = document.querySelectorAll('.project-images:not(.no-arrows)');
+
+    projectImageContainers2.forEach(container => {
+        // Create scroll arrows
+        const leftArrow = document.createElement('button');
+        leftArrow.className = 'scroll-arrow left';
+        leftArrow.innerHTML = '&#10094;';
+        leftArrow.setAttribute('aria-label', 'Scroll left');
+
+        const rightArrow = document.createElement('button');
+        rightArrow.className = 'scroll-arrow right';
+        rightArrow.innerHTML = '&#10095;';
+        rightArrow.setAttribute('aria-label', 'Scroll right');
+
+        container.appendChild(leftArrow);
+        container.appendChild(rightArrow);
+
+        // Update arrow states
+        function updateArrows() {
+            const scrollLeft = container.scrollLeft;
+            const maxScroll = container.scrollWidth - container.clientWidth;
+
+            leftArrow.disabled = scrollLeft <= 0;
+            rightArrow.disabled = scrollLeft >= maxScroll - 1;
+        }
+
+        // Scroll functionality
+        leftArrow.addEventListener('click', function() {
+            container.scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        });
+
+        rightArrow.addEventListener('click', function() {
+            container.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        });
+
+        container.addEventListener('scroll', updateArrows);
+        updateArrows();
+    });
 });
-
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .fade-in {
-        animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    }
-`;
-document.head.appendChild(style);

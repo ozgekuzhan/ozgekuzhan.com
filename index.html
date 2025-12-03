@@ -1,235 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Özge Kuzhan, a Full Stack Web Developer skilled in Ruby on Rails, JavaScript, and Bootstrap.">
-    <meta name="keywords" content="web developer, portfolio, Özge Kuzhan, full stack, Ruby on Rails, JavaScript, web development bootcamp, Amsterdam, marketing, finance, operations, problem-solving, leadership">
-    <meta name="author" content="Özge Kuzhan">
-    <meta property="og:title" content="Özge Kuzhan | Full Stack Web Developer">
-    <meta property="og:description" content="Hey, I'm Özge Kuzhan. This is where I share what I've been building with Ruby on Rails, JavaScript, and a bit of humor — whether you're hiring, learning, or just curious, you're welcome here.">
-    <meta property="og:image" content="img/pp.jpg">
-    <title>Özge Kuzhan | Full Stack Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfolio of Ozge Kuzhan, a Full Stack Web Developer skilled in Ruby on Rails, JavaScript, and Bootstrap.">
+  <meta name="keywords"
+    content="web developer, portfolio, Ozge Kuzhan, full stack, Ruby on Rails, JavaScript, web development bootcamp, Amsterdam, marketing, finance, operations, problem-solving, leadership">
+  <meta name="author" content="Ozge Kuzhan">
+  <meta property="og:title" content="Ozge Kuzhan | Full Stack Web Developer">
+  <meta property="og:description"
+    content="Hey, I'm Ozge Kuzhan. This is where I share what I've been building with Ruby on Rails, JavaScript, and a bit of humor — whether you're hiring, learning, or just curious, you're welcome here.">
+  <meta property="og:image" content="img/pp.jpg">
+  <title>Ozge Kuzhan | Full Stack Developer</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SW98MSK9DH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SW98MSK9DH');
+  </script>
 </head>
+
 <body>
-    <nav class="nav-minimal">
-        <div class="nav-content">
-            <h1 class="logo">ÖK</h1>
-            <a href="ozgekuzhanResume.pdf" class="btn-download" download>
-                <i class="fas fa-download"></i>
-                Resume
-            </a>
-        </div>
-    </nav>
-
-    <main class="grid-container">
-        <section class="section hero-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; min-height: 60vh;">
-            <div>
-                <span class="label">Full Stack Developer / Product Owner</span>
-                <h1 class="title">Özge Kuzhan</h1>
-                <p class="subtitle">Full Stack Developer in Amsterdam specializing in JavaScript, React, Ruby on Rails, and responsive web design. Building production-ready applications with focus on intuitive UI/UX and clean code architecture.</p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn-primary">Get in touch</a>
-                    <a href="https://github.com/ozgekuzhan" target="_blank" class="btn-icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/ozgekuzhan" target="_blank" class="btn-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-            <div style="position: relative;">
-                <img src="img/pp.webp" alt="Özge Kuzhan" style="width: 100%; height: 500px; object-fit: cover; filter: grayscale(100%);">
-            </div>
-        </section>
-
-        <section class="section-narrow">
-            <span class="label">About</span>
-            <h2>Background</h2>
-            <p>Full Stack Developer with strong background in <strong>Product Management</strong> and client communication. Le Wagon Amsterdam graduate (400+ hours) with 500+ additional hours of self-directed learning. Proven ability to manage full development lifecycle from concept to deployment, delivering practical solutions that balance technical excellence with user needs.</p>
-        </section>
-
-        <div class="section" style="display: flex; gap: 2rem; justify-content: center;">
-            <div class="stat">
-                <h2>500+</h2>
-                <p>Hours Coding</p>
-            </div>
-            <div class="stat">
-                <h2>10+</h2>
-                <p>Apps Built</p>
-            </div>
-        </div>
-
-        <section class="section-narrow">
-            <h2 class="section-title" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gray-600); margin-bottom: 3rem;">Selected Projects</h2>
-
-            <div style="margin-bottom: 4rem;">
-                <span class="label">2-Week Team Project</span>
-                <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">DealHuntr</h3>
-                <p style="margin-bottom: 1.5rem; line-height: 1.8;">Web application aggregating real-time product deals • Built with Ruby on Rails, PostgreSQL, Hotwire</p>
-                <div class="tech-stack" style="margin-bottom: 1.5rem;">
-                    <span>Rails</span>
-                    <span>PostgreSQL</span>
-                    <span>Hotwire</span>
-                </div>
-                <div class="project-images">
-                    <img src="img/dealhunter/main_page.webp" alt="DealHuntr Main" style="height: 300px; width: auto; object-fit: cover;">
-                    <img src="img/dealhunter/categories.webp" alt="DealHuntr Categories" style="height: 300px; width: auto; object-fit: cover;">
-                    <img src="img/dealhunter/shopping_list.webp" alt="DealHuntr Shopping List" style="height: 300px; width: auto; object-fit: cover;">
-                    <img src="img/dealhunter/expanded.webp" alt="DealHuntr Expanded" style="height: 300px; width: auto; object-fit: cover;">
-                </div>
-                <a href="https://github.com/ozgekuzhan/DealHuntr" target="_blank" class="btn-link">
-                    View on GitHub <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-
-            <div>
-                <span class="label">5-Day Sprint</span>
-                <h3 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 1rem;">WorkTree</h3>
-                <p style="margin-bottom: 1.5rem; line-height: 1.8;">Platform for reserving office and coworking spaces • Airbnb-style marketplace application</p>
-                <div class="tech-stack" style="margin-bottom: 1.5rem;">
-                    <span>Rails</span>
-                    <span>Devise</span>
-                    <span>Docker</span>
-                </div>
-                <div class="project-images">
-                    <img src="img/worktree/index_page_worktree.webp" alt="WorkTree Index" style="height: 300px; width: auto; object-fit: cover;">
-                    <img src="img/worktree/rent_page_worktree.webp" alt="WorkTree Rent" style="height: 300px; width: auto; object-fit: cover;">
-                    <img src="img/worktree/dashboard.webp" alt="WorkTree Dashboard" style="height: 300px; width: auto; object-fit: cover;">
-                </div>
-                <a href="https://github.com/ozgekuzhan/worktree" target="_blank" class="btn-link">
-                    View on GitHub <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </section>
-
-        <section class="section-narrow">
-            <h2 class="section-title" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gray-600); margin-bottom: 3rem;">Technical Skills</h2>
-
-            <div style="margin-bottom: 3rem;">
-                <span class="label">Frontend</span>
-                <p style="line-height: 1.8; margin-bottom: 0;">JavaScript • React • HTML5 • CSS3 • SCSS • Vue.js • Bootstrap • Responsive Design • DOM Manipulation • TypeScript</p>
-            </div>
-
-            <div style="margin-bottom: 3rem;">
-                <span class="label">Backend</span>
-                <p style="line-height: 1.8; margin-bottom: 0;">Python • Ruby • Ruby on Rails • RESTful API • CRUD Operations • OOP • MVC Architecture • JSON</p>
-            </div>
-
-            <div style="margin-bottom: 3rem;">
-                <span class="label">Database</span>
-                <p style="line-height: 1.8; margin-bottom: 0;">SQL • PostgreSQL • Database Design</p>
-            </div>
-
-            <div style="margin-bottom: 3rem;">
-                <span class="label">DevOps & Cloud</span>
-                <p style="line-height: 1.8; margin-bottom: 0;">Git • GitHub • Docker • Heroku • AWS • CI/CD • Version Control</p>
-            </div>
-
-            <div style="margin-bottom: 3rem;">
-                <span class="label">Tools & AI</span>
-                <p style="line-height: 1.8; margin-bottom: 0;">Copilot • Claude Code • OpenAI API • Agile/Scrum • JIRA • Confluence • Figma</p>
-            </div>
-
-            <div style="margin-bottom: 5rem;">
-                <span class="label">Design & Collaboration</span>
-                <p style="line-height: 1.8; margin-bottom: 0;">Figma • UI/UX Design • Wireframing</p>
-            </div>
-
-            <h2 class="section-title" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gray-600); margin-bottom: 3rem;">Business & Soft Skills</h2>
-
-            <div style="margin-bottom: 5rem;">
-                <p style="line-height: 1.8; margin-bottom: 0;">Marketing Strategy • Financial Planning • Purchasing Management • Operations Coordination • Project Management • Team Leadership • Communication • Problem Solving • Adaptability • Time Management</p>
-            </div>
-
-            <h2 class="section-title" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gray-600); margin-bottom: 3rem;">Experience</h2>
-            <div style="margin-bottom: 4rem;">
-                <span class="label">Jul 2023 - Present</span>
-                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Full Stack Web Developer</h3>
-                <p style="font-weight: 600; margin-bottom: 1rem;">Freelance & Portfolio Development</p>
-                <ul style="line-height: 1.8; padding-left: 1.5rem; margin-bottom: 0;">
-                    <li>Completed Le Wagon Amsterdam intensive bootcamp (400+ hours) building two production applications</li>
-                    <li>Developed over 10 web applications using JavaScript, React, Ruby on Rails, and PostgreSQL</li>
-                    <li>500+ hours of self-directed learning through Udemy bootcamps and hands-on projects</li>
-                </ul>
-            </div>
-
-            <div style="margin-bottom: 4rem;">
-                <span class="label">Jul 2020 - Mar 2023</span>
-                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Co-Founder & Product Manager</h3>
-                <p style="font-weight: 600; margin-bottom: 1rem;">Wiineed Software, Istanbul</p>
-                <ul style="line-height: 1.8; padding-left: 1.5rem; margin-bottom: 0;">
-                    <li>Co-founded B2B SaaS company developing custom software solutions for driving schools</li>
-                    <li>Led product development from requirements gathering to deployment</li>
-                    <li>Achieved 20% market penetration in Istanbul's driving school sector</li>
-                    <li>Managed full product lifecycle including feature prioritization, roadmap planning, and go-to-market strategy</li>
-                </ul>
-            </div>
-
-            <div style="margin-bottom: 5rem;">
-                <span class="label">2013 - 2020</span>
-                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Operations & Business Management</h3>
-                <p style="font-weight: 600; margin-bottom: 1rem;">British American Tobacco, Master Servis, Mystaff HR</p>
-                <ul style="line-height: 1.8; padding-left: 1.5rem; margin-bottom: 0;">
-                    <li>7 years of progressive experience in operations management, B2B sales, and client relations</li>
-                    <li>Led operational processes for 2,000+ personnel</li>
-                </ul>
-            </div>
-
-            <h2 class="section-title" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-gray-600); margin-bottom: 3rem;">Education</h2>
-
-            <div style="margin-bottom: 3rem;">
-                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Le Wagon Amsterdam</h3>
-                <p style="line-height: 1.8;"><strong>Full Stack Web Development</strong> • Mar 2025 • 9-week full-time intensive coding bootcamp • Learned HTML, CSS, Bootstrap, JavaScript, SQL, Git, GitHub, Heroku and Ruby on Rails • Designed, implemented and shipped to production a clone of Airbnb but for offices, WorkTree • Pitched an idea for a web app, DealHuntr and completed the project in 2 weeks in a team of 3</p>
-            </div>
-
-            <div style="margin-bottom: 3rem;">
-                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Codam Amsterdam</h3>
-                <p style="line-height: 1.8;"><strong>Python Bootcamp</strong> • Jul 2025 • 1-week intensive Python Bootcamp</p>
-            </div>
-
-            <div>
-                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Udemy - Colt Steele</h3>
-                <p style="line-height: 1.8;"><strong>Web Development Bootcamp</strong> • May 2023 - Dec 2024 • Web Development Bootcamp covering HTML, CSS, JavaScript, React</p>
-            </div>
-        </section>
-
-        <section class="section-narrow" id="contact" style="text-align: center;">
-            <span class="label">Contact</span>
-            <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 3rem; line-height: 1.2;">Let's work<br>together</h2>
-            <div style="margin-bottom: 3rem;">
-                <a href="mailto:ozgekuzhan@gmail.com" style="font-size: 1.25rem; color: var(--color-black); text-decoration: none; font-weight: 600; display: block; margin-bottom: 1rem;">
-                    ozgekuzhan@gmail.com
-                </a>
-                <p style="color: var(--color-gray-600);">Amsterdam, Netherlands</p>
-            </div>
-            <div class="social-links" style="justify-content: center;">
-                <a href="https://github.com/ozgekuzhan" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/ozgekuzhan" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </section>
-
-        <footer class="section" style="text-align: center; padding: 2rem 0; border-top: 1px solid var(--color-gray-300); margin-top: 4rem;">
-            <p style="font-size: 0.875rem; color: var(--color-gray-600);">&copy; <span id="current-year"></span> Özge Kuzhan • Designed & Built in Amsterdam</p>
-        </footer>
-    </main>
-
-    <div id="imageModal" class="image-modal">
-        <span class="modal-close">&times;</span>
-        <button class="modal-nav modal-prev">&#10094;</button>
-        <button class="modal-nav modal-next">&#10095;</button>
-        <img class="modal-content" id="modalImage">
-        <div class="modal-caption"></div>
+  <nav class="nav-minimal">
+    <div class="nav-content">
+      <h1 class="logo">OK</h1>
+      <a href="ozgekuzhanResume.pdf" class="btn-download" download>
+        <i class="fas fa-download"></i>
+        Resume
+      </a>
     </div>
+  </nav>
 
-    <script src="script.js"></script>
+  <main class="grid-container">
+    <section class="section hero-section">
+      <div>
+        <span class="label">Full Stack Developer / Product Owner</span>
+        <h1 class="title">Ozge Kuzhan</h1>
+        <p class="subtitle">Full Stack Developer in Amsterdam specializing in JavaScript, React, Ruby on Rails, and
+          responsive web design. Building production-ready applications with focus on intuitive UI/UX and clean code
+          architecture.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Get in touch</a>
+          <a href="https://github.com/ozgekuzhan" target="_blank" class="btn-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ozgekuzhan" target="_blank" class="btn-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper">
+        <img src="img/pp.webp" alt="Ozge Kuzhan" class="hero-image">
+      </div>
+    </section>
+
+    <section class="section-narrow">
+      <span class="label">About</span>
+      <h2>Background</h2>
+      <p>Full Stack Developer with strong background in <strong>Product Management</strong> and client communication. Le
+        Wagon Amsterdam graduate (400+ hours) with 500+ additional hours of self-directed learning. Proven ability to
+        manage full development lifecycle from concept to deployment, delivering practical solutions that balance
+        technical excellence with user needs.</p>
+      <p class="work-permit-notice">
+        ✓ EU Work Permit Holder • No Sponsorship Required
+      </p>
+    </section>
+
+    <section class="section-narrow">
+      <div class="stats-container">
+        <div class="stat">
+          <h2>500+</h2>
+          <p>Hours Coding</p>
+        </div>
+        <div class="stat">
+          <h2>10+</h2>
+          <p>Apps Built</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-narrow">
+      <h2 class="section-title">Selected Projects</h2>
+
+      <div class="project-item">
+        <span class="label">2-Week Team Project</span>
+        <h3 class="project-title">DealHuntr</h3>
+        <p class="project-description">Product deal aggregation platform connecting users with discounts from multiple
+          retailers</p>
+        <ul class="project-list">
+          <li>Created responsive frontend using JavaScript (Hotwire) and Bootstrap 5 with mobile-first design</li>
+          <li>Built a Rails backend with RESTful routing for product deal management across stores</li>
+          <li>Designed a PostgreSQL database with a normalized schema and optimized indexing</li>
+          <li>Implemented a smart recommendation system using keyword matching and category filtering</li>
+        </ul>
+        <div class="tech-stack">
+          <span>Ruby on Rails</span>
+          <span>PostgreSQL</span>
+          <span>Bootstrap</span>
+          <span>JavaScript</span>
+          <span>Docker</span>
+        </div>
+        <div class="project-images no-arrows">
+          <img src="img/dealhunter/main_page.webp" alt="DealHuntr Main">
+          <img src="img/dealhunter/categories.webp" alt="DealHuntr Categories">
+          <img src="img/dealhunter/shopping_list.webp" alt="DealHuntr Shopping List">
+          <img src="img/dealhunter/expanded.webp" alt="DealHuntr Expanded">
+        </div>
+        <a href="https://github.com/ozgekuzhan/DealHuntr" target="_blank" class="btn-link">
+          View on GitHub <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="project-item">
+        <span class="label">5-Day Sprint Project</span>
+        <h3 class="project-title">WorkTree</h3>
+        <p class="project-description">Office and coworking space reservation platform with role-based booking
+          management</p>
+        <ul class="project-list">
+          <li>Designed a dynamic, SPA-like frontend using JavaScript (Hotwire) and Bootstrap 5 for seamless navigation
+          </li>
+          <li>Built a Rails backend with RESTful routing and role-based authentication using Devise (owner/renter roles)
+          </li>
+          <li>Created a three-state booking approval workflow with owner controls (pending, accepted, declined)</li>
+          <li>Integrated an image upload system using Active Storage and Cloudinary for space photos</li>
+        </ul>
+        <div class="tech-stack">
+          <span>Ruby on Rails</span>
+          <span>JavaScript</span>
+          <span>PostgreSQL</span>
+          <span>Devise</span>
+          <span>Docker</span>
+          <span>Bootstrap</span>
+        </div>
+        <div class="project-images">
+          <img src="img/worktree/index_page_worktree.webp" alt="WorkTree Index">
+          <img src="img/worktree/rent_page_worktree.webp" alt="WorkTree Rent">
+          <img src="img/worktree/dashboard.webp" alt="WorkTree Dashboard">
+        </div>
+        <a href="https://github.com/ozgekuzhan/worktree" target="_blank" class="btn-link">
+          View on GitHub <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="section-narrow">
+      <h2 class="section-title">Technical Skills</h2>
+
+      <div class="skill-category">
+        <span class="label">Frontend</span>
+        <p class="skill-text">JavaScript • React • HTML5 • CSS3 • SCSS • Vue.js • Bootstrap • Responsive Design • DOM
+          Manipulation • TypeScript</p>
+      </div>
+
+      <div class="skill-category">
+        <span class="label">Backend</span>
+        <p class="skill-text">Python • Ruby • Ruby on Rails • RESTful API • CRUD Operations • OOP • MVC Architecture •
+          JSON</p>
+      </div>
+
+      <div class="skill-category">
+        <span class="label">Database</span>
+        <p class="skill-text">SQL • PostgreSQL • Database Design</p>
+      </div>
+
+      <div class="skill-category">
+        <span class="label">DevOps & Cloud</span>
+        <p class="skill-text">Git • GitHub • Docker • Heroku • AWS • CI/CD • Version Control</p>
+      </div>
+
+      <div class="skill-category">
+        <span class="label">Tools & AI</span>
+        <p class="skill-text">Copilot • Claude Code • OpenAI API • Agile/Scrum • JIRA • Confluence • Figma</p>
+      </div>
+
+      <div class="skill-category">
+        <span class="label">Design & Collaboration</span>
+        <p class="skill-text">Figma • UI/UX Design • Wireframing</p>
+      </div>
+    </section>
+
+    <section class="section-narrow">
+      <h2 class="section-title">Business & Soft Skills</h2>
+
+      <div class="skill-category">
+        <p class="skill-text">Marketing Strategy • Financial Planning • Purchasing Management • Operations Coordination
+          • Project Management • Team Leadership • Communication • Problem Solving • Adaptability • Time Management</p>
+      </div>
+    </section>
+
+    <section class="section-narrow">
+      <h2 class="section-title">Experience</h2>
+      <div class="experience-item">
+        <span class="label">Jul 2023 - Present</span>
+        <h3 class="job-title">Full Stack Web Developer</h3>
+        <p class="company-name">Freelance & Portfolio Development</p>
+        <ul class="item-list">
+          <li>Completed Le Wagon Amsterdam intensive bootcamp (400+ hours) building two production applications</li>
+          <li>Developed over 10 web applications using JavaScript, React, Ruby on Rails, and PostgreSQL</li>
+          <li>Engaged in self-directed learning: over 500 hours of coding through Udemy bootcamps and hands-on projects
+          </li>
+          <li>Built full-stack proficiency from frontend (React, Bootstrap) to backend (Rails, PostgreSQL)</li>
+          <li>Technologies used include JavaScript, React, Ruby on Rails, PostgreSQL, Docker, Git, and Bootstrap</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <span class="label">Jul 2020 - Mar 2023</span>
+        <h3 class="job-title">Co-Founder & Product Manager</h3>
+        <p class="company-name">Wiineed Software, Istanbul</p>
+        <ul class="item-list">
+          <li>Co-founded B2B SaaS company developing custom software solutions for driving schools</li>
+          <li>Led product development from requirements gathering to deployment for tailored applications</li>
+          <li>Achieved 20% market penetration in Istanbul's driving school sector through direct B2B sales</li>
+          <li>Collaborated with the development team to translate client requirements into technical specifications</li>
+          <li>Presented the product vision to over eight angel investors and secured seed funding for company growth
+          </li>
+          <li>Managed full product lifecycle including feature prioritization, roadmap planning, and go-to-market
+            strategy</li>
+          <li>Technologies: Software development, B2B SaaS, product management, Agile methodology</li>
+        </ul>
+      </div>
+
+      <div class="experience-item last-item">
+        <span class="label">2013 - 2020</span>
+        <h3 class="job-title">Operations & Business Management</h3>
+        <p class="company-name">British American Tobacco, Master Servis, Mystaff HR</p>
+        <ul class="item-list">
+          <li>7 years of progressive experience in operations management, B2B sales, and client relations</li>
+          <li>Led operational processes for over 2,000 personnel and optimized purchasing workflows, reducing costs</li>
+          <li>Built strong stakeholder communication and project coordination skills in fast-paced environments</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-narrow">
+      <h2 class="section-title">Education</h2>
+
+      <div class="education-item">
+        <span class="label">Mar 2025</span>
+        <h3 class="education-title">Le Wagon Amsterdam</h3>
+        <p class="education-program">Full Stack Web Development</p>
+        <ul class="item-list">
+          <li>9-week full-time intensive coding bootcamp</li>
+          <li>Learned HTML, CSS, Bootstrap, JavaScript, SQL, Git, GitHub, Heroku and Ruby on Rails</li>
+          <li>Designed, implemented and shipped to production a clone of Airbnb but for offices, WorkTree</li>
+          <li>Pitched an idea for a web app, DealHuntr and completed the project in 2 weeks in a team of 3</li>
+        </ul>
+      </div>
+
+      <div class="education-item">
+        <span class="label">Nov 2025</span>
+        <h3 class="education-title">ICT Tribe Almere</h3>
+        <p class="education-program">AWS Cloud Practitioner Essentials (AW-CP-ESS)</p>
+        <ul class="item-list">
+          <li>AWS Cloud fundamentals and core services training</li>
+        </ul>
+      </div>
+
+      <div class="education-item">
+        <span class="label">Jul 2025</span>
+        <h3 class="education-title">Codam Amsterdam</h3>
+        <p class="education-program">Python Bootcamp</p>
+        <ul class="item-list">
+          <li>1-week intensive Python Bootcamp</li>
+        </ul>
+      </div>
+
+      <div class="education-item">
+        <span class="label">May 2023 - Dec 2024</span>
+        <h3 class="education-title">Udemy - Colt Steele</h3>
+        <p class="education-program">Web Development Bootcamp</p>
+        <ul class="item-list">
+          <li>Web Development Bootcamp covering HTML, CSS, JavaScript, React</li>
+        </ul>
+      </div>
+
+      <div class="education-item">
+        <span class="label">May 2023</span>
+        <h3 class="education-title">Code Institute</h3>
+        <p class="education-program">Five Day Coding Challenge</p>
+        <ul class="item-list">
+          <li>5 days challenge of HTML, CSS, JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="education-item">
+        <span class="label">Sep 2012 - Jun 2018</span>
+        <h3 class="education-title">Trakya University</h3>
+        <p class="education-program">International Relations</p>
+        <ul class="item-list">
+          <li>Bachelor's Degree</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-narrow">
+      <div class="languages-additional-grid">
+        <div>
+          <h2 class="section-title">Languages</h2>
+          <p class="skill-text">English (B2) • Turkish (Native) • Dutch (Beginner)</p>
+        </div>
+        <div>
+          <h2 class="section-title">Additional Information</h2>
+          <p class="skill-text">Dutch Driving License (Class B)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-narrow contact-section" id="contact">
+      <span class="label">Contact</span>
+      <h2 class="contact-title">Let's work<br>together</h2>
+      <div class="contact-info">
+        <a href="mailto:ozgekuzhan@gmail.com" class="contact-email">
+          ozgekuzhan@gmail.com
+        </a>
+        <p class="contact-location">Amsterdam, Netherlands</p>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/ozgekuzhan" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ozgekuzhan" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </section>
+
+    <footer class="section">
+      <p class="footer-text">&copy; <span id="current-year"></span> Özge Kuzhan • Designed & Built in Amsterdam</p>
+    </footer>
+  </main>
+
+  <div id="imageModal" class="image-modal">
+    <span class="modal-close">&times;</span>
+    <button class="modal-nav modal-prev">&#10094;</button>
+    <button class="modal-nav modal-next">&#10095;</button>
+    <img class="modal-content" id="modalImage">
+    <div class="modal-caption"></div>
+  </div>
+
+  <button class="scroll-to-top" id="scrollToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
