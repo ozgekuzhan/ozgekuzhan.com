@@ -5,20 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentYearElement.textContent = new Date().getFullYear();
     }
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
     // Image Modal/Lightbox functionality
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
@@ -30,22 +16,47 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentImages = [];
     let currentIndex = 0;
 
-    // Get all project image containers
     const projectImageContainers = document.querySelectorAll('.project-images');
 
     projectImageContainers.forEach(container => {
         const images = container.querySelectorAll('img');
 
-        images.forEach((img, index) => {
-            img.addEventListener('click', function() {
-                // Store all images in this gallery
-                currentImages = Array.from(images);
-                currentIndex = index;
+        if (images.length >= 2) {
+            const slideContainer = document.createElement('div');
+            slideContainer.className = 'slide-container';
 
-                // Show modal
-                showImage(this.src, this.alt);
+            images.forEach(img => {
+                slideContainer.appendChild(img.cloneNode(true));
             });
-        });
+
+            container.innerHTML = '';
+            container.appendChild(slideContainer);
+
+            let currentSlide = 0;
+            const totalSlides = images.length;
+
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                slideContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }, 3000);
+
+            const slideImages = slideContainer.querySelectorAll('img');
+            slideImages.forEach((img, index) => {
+                img.addEventListener('click', function() {
+                    currentImages = Array.from(slideImages);
+                    currentIndex = index;
+                    showImage(this.src, this.alt);
+                });
+            });
+        } else {
+            images.forEach((img, index) => {
+                img.addEventListener('click', function() {
+                    currentImages = Array.from(images);
+                    currentIndex = index;
+                    showImage(this.src, this.alt);
+                });
+            });
+        }
     });
 
     function showImage(src, alt) {
@@ -121,51 +132,5 @@ document.addEventListener('DOMContentLoaded', function() {
             top: 0,
             behavior: 'smooth'
         });
-    });
-
-    // Project images scroll arrows
-    const projectImageContainers2 = document.querySelectorAll('.project-images:not(.no-arrows)');
-
-    projectImageContainers2.forEach(container => {
-        // Create scroll arrows
-        const leftArrow = document.createElement('button');
-        leftArrow.className = 'scroll-arrow left';
-        leftArrow.innerHTML = '&#10094;';
-        leftArrow.setAttribute('aria-label', 'Scroll left');
-
-        const rightArrow = document.createElement('button');
-        rightArrow.className = 'scroll-arrow right';
-        rightArrow.innerHTML = '&#10095;';
-        rightArrow.setAttribute('aria-label', 'Scroll right');
-
-        container.appendChild(leftArrow);
-        container.appendChild(rightArrow);
-
-        // Update arrow states
-        function updateArrows() {
-            const scrollLeft = container.scrollLeft;
-            const maxScroll = container.scrollWidth - container.clientWidth;
-
-            leftArrow.disabled = scrollLeft <= 0;
-            rightArrow.disabled = scrollLeft >= maxScroll - 1;
-        }
-
-        // Scroll functionality
-        leftArrow.addEventListener('click', function() {
-            container.scrollBy({
-                left: -300,
-                behavior: 'smooth'
-            });
-        });
-
-        rightArrow.addEventListener('click', function() {
-            container.scrollBy({
-                left: 300,
-                behavior: 'smooth'
-            });
-        });
-
-        container.addEventListener('scroll', updateArrows);
-        updateArrows();
     });
 });
