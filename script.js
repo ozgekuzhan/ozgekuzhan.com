@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Set current year in footer
     const currentYearElement = document.getElementById('current-year');
     if (currentYearElement) {
         currentYearElement.textContent = new Date().getFullYear();
     }
 
-    // Image Modal/Lightbox functionality
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
     const modalCaption = document.querySelector('.modal-caption');
@@ -28,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             images.forEach(img => {
                 slideContainer.appendChild(img.cloneNode(true));
             });
+            slideContainer.appendChild(images[0].cloneNode(true));
 
             container.innerHTML = '';
             container.appendChild(slideContainer);
@@ -35,9 +34,20 @@ document.addEventListener('DOMContentLoaded', function() {
             let currentSlide = 0;
             const totalSlides = images.length;
 
-            setInterval(() => {
-                currentSlide = (currentSlide + 1) % totalSlides;
+            const slideInterval = setInterval(() => {
+                currentSlide++;
                 slideContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+                if (currentSlide === totalSlides) {
+                    setTimeout(() => {
+                        slideContainer.style.transition = 'none';
+                        currentSlide = 0;
+                        slideContainer.style.transform = `translateX(0)`;
+                        setTimeout(() => {
+                            slideContainer.style.transition = 'transform 0.6s ease-in-out';
+                        }, 50);
+                    }, 600);
+                }
             }, 3000);
 
             const slideImages = slideContainer.querySelectorAll('img');
@@ -89,21 +99,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Close button click
     closeBtn.addEventListener('click', closeModal);
 
-    // Navigation buttons
     prevBtn.addEventListener('click', showPrevImage);
     nextBtn.addEventListener('click', showNextImage);
 
-    // Click outside image to close
     modal.addEventListener('click', function(e) {
         if (e.target === modal) {
             closeModal();
         }
     });
 
-    // Keyboard navigation
     document.addEventListener('keydown', function(e) {
         if (modal.classList.contains('active')) {
             if (e.key === 'Escape') {
@@ -116,7 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Scroll to top button
     const scrollToTopBtn = document.getElementById('scrollToTop');
 
     window.addEventListener('scroll', function() {
