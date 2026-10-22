@@ -970,3 +970,22 @@ main > .section-narrow:first-of-type {
 .about-text + .about-text {
   margin-top: 1rem;
 }
+
+.project-video {
+  max-width: 280px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.project-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 36px;
+}
+
+.video-note {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--color-gray-700);
+}
